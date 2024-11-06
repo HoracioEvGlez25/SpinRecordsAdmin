@@ -54,6 +54,15 @@
             "imageUrl": "assets/images/products/FWNN.jpg",
             "price": "$300.00",
             "genre": "Rock"
+        },
+        {
+            "id": 4,
+            "title": "Tocadiscos Clásico",
+            "artist": "Technics",
+            "stock": "$1500",
+            "imageUrl": "assets/images/products/revolver.jpg",
+            "price": "$300.00",
+            "genre": "Rock"
         }
     ],
     "tocadiscos": [
@@ -81,5 +90,6 @@
             "type": "Semi-automático",
             "imageUrl": "assets/images/products/TTTT.jpg"
         }
+       
     ]
 }
