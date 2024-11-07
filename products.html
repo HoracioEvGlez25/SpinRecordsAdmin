@@ -321,48 +321,64 @@
               <div class="row align-items-center">
                 <div class="col-md-6">
                   <div class="title">
-                    <h2>Vinilos </h2>
-                    <!-- Boton Agregar -->
-                    <button class="btn btn-primary" id="showFormBtn">Agregar Album</button>
-                     <!-- Formulario oculto -->
-                      <div id="albumForm" style="display:none; margin-top: 20px;">
-                        <h4>Agregar Álbum</h4>
-                        <form id="albumFormSubmit">
-                          <div class="mb-3">
-                            <label for="albumName" class="form-label">Nombre del Álbum</label>
-                            <input type="text" class="form-control" id="albumName" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="artist" class="form-label">Artista</label>
-                            <input type="text" class="form-control" id="artist" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="year" class="form-label">Año</label>
-                            <input type="number" class="form-control" id="year" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="stock" class="form-label">Stock</label>
-                            <input type="number" class="form-control" id="stock" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="albumImage" class="form-label">Imagen del Álbum</label>
-                            <input type="file" class="form-control" id="albumImage" accept="image/*" required>
-                          </div>
-                          <button type="submit" class="btn btn-success">Agregar</button>
-                        </form>
-                      </div>
+                    <h2>Vinilos</h2>
                   </div>
                 </div>
-                <!-- Aqui termina Formulario oculto -->
-                 <!-- Contenedor donde se mostrarán las tarjetas -->
+                <div class="col-md-6">
+                  <div class="breadcrumb-wrapper">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                          <a href="#0">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          SpinRecords
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" id="showFormBtn">Agregar Álbum</button>
+            <p></p>
+            <div id="albumForm" style="display:none; margin-top: 20px;">
+              <h4>Agregar Álbum</h4>
+              <p></p>
+              <form id="albumFormSubmit">
+                <div class="mb-3" style="margin-bottom: 15px;">
+                  <p></p>
+                  <label for="albumName" class="form-label">Nombre del Álbum</label>
+                  <input type="text" class="form-control" id="albumName" required>
+                </div>
+                <div class="mb-3" style="margin-bottom: 15px;">
+                  <label for="artist" class="form-label">Artista</label>
+                  <input type="text" class="form-control" id="artist" required>
+                </div>
+                <div class="mb-3" style="margin-bottom: 15px;">
+                  <label for="year" class="form-label">Año</label>
+                  <input type="number" class="form-control" id="year" required>
+                </div>
+                <div class="mb-3" style="margin-bottom: 15px;">
+                  <label for="stock" class="form-label">Stock</label>
+                  <input type="number" class="form-control" id="stock" required>
+                </div>
+                <div class="mb-3" style="margin-bottom: 15px;">
+                  <label for="albumImage" class="form-label">Imagen del Álbum</label>
+                  <input type="file" class="form-control" id="albumImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-success">Agregar</button>
+              </form>
+            </div>
+            
+
                   <div id="albumsContainer" class="mt-4"></div>
                   <script>
-                    // Mostrar el formulario cuando se haga clic en el botón
                     document.getElementById('showFormBtn').addEventListener('click', function() {
                       document.getElementById('albumForm').style.display = 'block';
                     });
                   
-                    // Cargar álbumes desde localStorage al cargar la página
                     document.addEventListener('DOMContentLoaded', loadAlbumsFromStorage);
                   
                     function loadAlbumsFromStorage() {
@@ -372,41 +388,32 @@
                       });
                     }
                   
-                    // Manejar el envío del formulario
                     document.getElementById('albumFormSubmit').addEventListener('submit', function(event) {
                       event.preventDefault();
                   
-                      // Obtener los datos del formulario
                       const albumName = document.getElementById('albumName').value;
                       const artist = document.getElementById('artist').value;
                       const year = document.getElementById('year').value;
                       const stock = document.getElementById('stock').value;
                       const albumImage = document.getElementById('albumImage').files[0];
                   
-                      // Crear un objeto URL para la imagen
                       const imageURL = URL.createObjectURL(albumImage);
                   
-                      // Crear un objeto álbum
                       const album = { albumName, artist, year, stock, imageURL };
                   
-                      // Guardar el álbum en localStorage
                       saveAlbumToStorage(album);
                   
-                      // Agregar la tarjeta del álbum al DOM
                       addAlbumToDOM(album);
                   
-                      // Limpiar el formulario
                       document.getElementById('albumFormSubmit').reset();
                     });
                   
-                    // Guardar álbum en localStorage
                     function saveAlbumToStorage(album) {
                       const storedAlbums = JSON.parse(localStorage.getItem('albums')) || [];
                       storedAlbums.push(album);
                       localStorage.setItem('albums', JSON.stringify(storedAlbums));
                     }
                   
-                    // Agregar álbum al DOM
                     function addAlbumToDOM(album) {
                       const albumCard = `
                         <div class="card-style">
@@ -445,65 +452,227 @@
                           </div>
                         </div>
                       `;
-                  
-                      // Agregar la tarjeta al contenedor
                       document.getElementById('albumsContainer').innerHTML += albumCard;
                     }
                   </script>
-                
-                <div class="col-md-6">
-                  <div class="breadcrumb-wrapper">
-                    <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                          <a href="#0">Dashboard</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">
-                          SpinRecords
-                        </li>
-                      </ol>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="card-style">
-              <div class="single-notification">
-                <div class="checkbox">
-                  <div class="form-check checkbox-style mb-20">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
-                  </div>
-                </div>
-                <div class="notification">
-                  <div class="image warning-bg">
-                    <img src="assets/images/products/B.jpg" alt="Imagen del álbum" class="album-image" />
-                  </div>
-                  <a href="#0" class="content">
-                    <h6>Álbum: Blur</h6>
-                    <p class="text-sm text-gray">
-                      Artista: <strong id="album-artist">Blur</strong><br>
-                      Año: <strong id="album-year">1997</strong><br>
-                      Stock: <strong id="album-year">500</strong>
-                    </p>
-                  </a>
-                </div>
-                <div class="action">
-                  <button class="delete-btn">
-                    <i class="lni lni-trash-can"></i>
-                  </button>
-                  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="lni lni-more-alt"></i>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                    <li class="dropdown-item">
-                      <a href="#0" class="text-gray">Modificar</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/Humbug.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Humbug</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Arctic Monkeys</strong><br>
+          Año: <strong id="album-artist">2009</strong><br>
+          Stock: <strong id="album-year">97</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/G.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Gorillaz</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Gorillaz</strong><br>
+          Año: <strong id="album-artist">2001</strong><br>
+          Stock: <strong id="album-year">100</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/FWNN.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Favourite worst nigthmare</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Arctic Monkeys</strong><br>
+          Año: <strong id="album-artist">2007</strong><br>
+          Stock: <strong id="album-year">123</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/B.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Tocadiscos Vintage</h6>
+        <h6>Album: Blur</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Blur</strong><br>
+          Año: <strong id="album-artist">1997</strong><br>
+          Stock: <strong id="album-year">55</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/MLisR.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Modern Life is Rubbish</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Blur</strong><br>
+          Año: <strong id="album-artist">1993</strong><br>
+          Stock: <strong id="album-year">5</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification">
+      <div class="image warning-bg">
+        <img src="assets/images/products/black sabbath.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Black sabbath</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Black sabbath</strong><br>
+          Año: <strong id="album-artist">1970</strong><br>
+          Stock: <strong id="album-year">40</strong>
+        </p>
+      </a>
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
             <div class="notification-wrapper">
               <div class="container-fluid">
                 <div class="title-wrapper pt-30">
@@ -511,7 +680,6 @@
                     <div class="col-md-6">
                       <div class="title">
                         <h2>Tocadiscos </h2>
-                        
                       </div>
                     </div>
 
@@ -524,14 +692,85 @@
                         </div>
                         <div class="notification">
                           <div class="image warning-bg">
+                            <img src="assets/images/products/T.jpg" alt="Imagen del álbum" class="album-image" />
+                          </div>
+                          <a href="#0" class="content">
+                            <h6>Tocadiscos Vintage</h6>
+                            <p class="text-sm text-gray">
+                              Tipo: <strong id="album-title">Manual</strong><br>
+                              Marca: <strong id="album-artist">Sony</strong><br>
+                              Precio: <strong id="album-year">$1150</strong>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="action">
+                          <button class="delete-btn">
+                            <i class="lni lni-trash-can"></i>
+                          </button>
+                          <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Modificar</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-style">
+                      <div class="single-notification">
+                        <div class="checkbox">
+                          <div class="form-check checkbox-style mb-20">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+                          </div>
+                        </div>
+                        <div class="notification">
+                          <div class="image warning-bg">
+                            <img src="assets/images/products/TDS.jpg" alt="Imagen del álbum" class="album-image" />
+                          </div>
+                          <a href="#0" class="content">
+                            <h6>Tocadiscos Moderno</h6>
+                            <p class="text-sm text-gray">
+                              Tipo: <strong id="album-title">Automático</strong><br>
+                              Marca: <strong id="album-artist">Audio-Technica</strong><br>
+                              Precio: <strong id="album-year">$1300</strong>
+                            </p>
+                          </a>
+                        </div>
+                        <div class="action">
+                          <button class="delete-btn">
+                            <i class="lni lni-trash-can"></i>
+                          </button>
+                          <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Modificar</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-style">
+                      <div class="single-notification">
+                        <div class="checkbox">
+                          <div class="form-check checkbox-style mb-20">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+                          </div>
+                        </div>
+                        <div class="notification">
+                          <div class="image warning-bg">
                             <img src="assets/images/products/TTTT.jpg" alt="Imagen del álbum" class="album-image" />
                           </div>
                           <a href="#0" class="content">
-                            <h6>Nuevo álbum agregado</h6>
+                            <h6>Tocadiscos Clásico</h6>
                             <p class="text-sm text-gray">
-                              Álbum: <strong id="album-title">Nombre del Álbum</strong><br>
-                              Artista: <strong id="album-artist">Nombre del Artista</strong><br>
-                              Año: <strong id="album-year">Año del Álbum</strong>
+                              Tipo: <strong id="album-title">Semi-automático</strong><br>
+                              Marca: <strong id="album-artist">Technics</strong><br>
+                              Precio: <strong id="album-year">$ 1500</strong>
                             </p>
                           </a>
                         </div>
