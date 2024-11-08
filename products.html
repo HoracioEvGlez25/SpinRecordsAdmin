@@ -103,6 +103,23 @@
             <span class="divider"><hr /></span>
 
             <li class="nav-item">
+              <a href="binnacle.html">
+                <span class="icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.66666 4.16667C1.66666 3.24619 2.41285 2.5 3.33332 2.5H16.6667C17.5872 2.5 18.3333 3.24619 18.3333 4.16667V9.16667C18.3333 10.0872 17.5872 10.8333 16.6667 10.8333H3.33332C2.41285 10.8333 1.66666 10.0872 1.66666 9.16667V4.16667Z" />
+                    <path
+                      d="M1.875 13.75C1.875 13.4048 2.15483 13.125 2.5 13.125H17.5C17.8452 13.125 18.125 13.4048 18.125 13.75C18.125 14.0952 17.8452 14.375 17.5 14.375H2.5C2.15483 14.375 1.875 14.0952 1.875 13.75Z" />
+                    <path
+                      d="M2.5 16.875C2.15483 16.875 1.875 17.1548 1.875 17.5C1.875 17.8452 2.15483 18.125 2.5 18.125H17.5C17.8452 18.125 18.125 17.8452 18.125 17.5C18.125 17.1548 17.8452 16.875 17.5 16.875H2.5Z" />
+                  </svg>
+                </span>
+                <span class="text">Bitácora</span>
+              </a>
+            </li>
+            <span class="divider"><hr /></span>
+
+            <li class="nav-item">
               <a href="notification.html">
                 <span class="icon">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -465,7 +482,7 @@
     </div>
     <div class="notification5">
       <div class="image warning-bg">
-        <img src="assets/images/products/Humbug.jpg" alt="Imagen del álbum" class="album-image" />
+        <img src="assets/images/products/Humbug.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
       </div>
       <a href="#0" class="content">
         <h6>Album: Humbug</h6>
@@ -532,7 +549,7 @@
          padding: 15px;
          border-top: 1px solid #ddd;
          border-radius: 8px;
-         max-width: 800px; /* Ancho máximo ajustado */
+         max-width: 800px; 
          background-color: #f9f9f9;
          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
      }
@@ -553,7 +570,7 @@
  
      .detail-item5 .label {
          font-weight: bold;
-         width: 120px; /* Ajuste de ancho para alinear etiquetas */
+         width: 120px; 
          color: #555;
      }
  
@@ -589,7 +606,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Espaciado alrededor de cada tarjeta */
+    margin: 0 auto; 
 }
  </style>
  
@@ -603,9 +620,7 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del album Humbung-->
-
-
+    
     </div>
     <div class="action">
       <button class="delete-btn">
@@ -632,7 +647,7 @@
     </div>
     <div class="notification4">
       <div class="image warning-bg">
-        <img src="assets/images/products/G.jpg" alt="Imagen del álbum" class="album-image" />
+        <img src="assets/images/products/G.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
       </div>
       <a href="#0" class="content">
         <h6>Album: Gorillaz</h6>
@@ -642,11 +657,9 @@
           Stock: <strong id="album-year">100</strong>
         </p>
       </a>
-             <!--Aqui voy a modificar lo del album Gorillaz-->
-       <!-- Botón para mostrar los detalles adicionales -->
+
        <button class="details-btn4" onclick="toggleDetails4()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
        <div class="details4" id="album-details4">
            <h4>Detalles del Producto</h4>
            <div class="detail-item4">
@@ -684,84 +697,84 @@
    </div>
    
    <style>
-     .notification4 {
-         position: relative;
-         border: 1px solid #ddd;
-         border-radius: 8px;
-         padding: 15px;
-         margin: 10px;
-         max-width: 400px;
-         font-family: Arial, sans-serif;
-     }
- 
-     .details4 {
-         display: none;
-         font-size: 0.9em;
-         color: #333;
-         margin-top: 15px;
-         padding: 15px;
-         border-top: 1px solid #ddd;
-         border-radius: 8px;
-         max-width: 800px; /* Ancho máximo ajustado */
-         background-color: #f9f9f9;
-         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-     }
- 
-     .details h4 {
-         margin-top: 0;
-         font-size: 1.1em;
-         color: #444;
-         border-bottom: 1px solid #ddd;
-         padding-bottom: 5px;
-     }
- 
-     .detail-item4 {
-         display: flex;
-         margin-top: 8px;
-         font-size: 0.95em;
-     }
- 
-     .detail-item4 .label {
-         font-weight: bold;
-         width: 120px; /* Ajuste de ancho para alinear etiquetas */
-         color: #555;
-     }
- 
-     .detail-item4 .value {
-         color: #333;
-     }
- 
-     .song-list4 {
-         padding-left: 20px;
-         list-style-type: disc;
-         color: #444;
-         margin: 5px 0;
-     }
- 
-     .details-btn4 {
-         background-color: #007bff;
-         color: white;
-         border: none;
-         padding: 8px 12px;
-         cursor: pointer;
-         border-radius: 4px;
-         font-size: 0.9em;
-         margin-top: 10px;
-     }
-     .card-style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    .notification4 {
+        position: relative;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 10px;
+        max-width: 400px;
+        font-family: Arial, sans-serif;
+    }
+
+    .details4 {
+        display: none;
+        font-size: 0.9em;
+        color: #333;
+        margin-top: 15px;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        border-radius: 8px;
+        max-width: 800px; 
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .details h4 {
+        margin-top: 0;
+        font-size: 1.1em;
+        color: #444;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
+
+    .detail-item4 {
+        display: flex;
+        margin-top: 8px;
+        font-size: 0.95em;
+    }
+
+    .detail-item4 .label {
+        font-weight: bold;
+        width: 120px; /* Ajuste de ancho para alinear etiquetas */
+        color: #555;
+    }
+
+    .detail-item4 .value {
+        color: #333;
+    }
+
+    .song-list4 {
+        padding-left: 20px;
+        list-style-type: disc;
+        color: #444;
+        margin: 5px 0;
+    }
+
+    .details-btn4 {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+    .card-style {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
 }
 
-     .single-notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; /* Espaciado alrededor de cada tarjeta */
+    .single-notification {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto; 
 }
- </style>
+</style>
  
  <script>
      function toggleDetails4() {
@@ -773,9 +786,7 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del album Gorillaz-->
-
-
+ 
     </div>
     <div class="action">
       <button class="delete-btn">
@@ -802,7 +813,7 @@
     </div>
     <div class="notification3">
       <div class="image warning-bg">
-        <img src="assets/images/products/FWNN.jpg" alt="Imagen del álbum" class="album-image" />
+        <img src="assets/images/products/FWNMM.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
       </div>
       <a href="#0" class="content">
         <h6>Album: Favourite worst nigthmare</h6>
@@ -812,11 +823,9 @@
           Stock: <strong id="album-year">123</strong>
         </p>
       </a>
-              <!--Aqui voy a modificar lo del album Favourite worst nigthmare-->
-       <!-- Botón para mostrar los detalles adicionales -->
+       
        <button class="details-btn3" onclick="toggleDetails3()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
        <div class="details3" id="album-details3">
            <h4>Detalles del Producto</h4>
            <div class="detail-item3">
@@ -870,7 +879,7 @@
          padding: 15px;
          border-top: 1px solid #ddd;
          border-radius: 8px;
-         max-width: 800px; /* Ancho máximo ajustado */
+         max-width: 800px; 
          background-color: #f9f9f9;
          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
      }
@@ -969,7 +978,7 @@
     </div>
     <div class="notification2">
       <div class="image warning-bg">
-        <img src="assets/images/products/B.jpg" alt="Imagen del álbum" class="album-image" />
+        <img src="assets/images/products/BC.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
       </div>
       <a href="#0" class="content">
         <h6>Album: Blur</h6>
@@ -1139,7 +1148,7 @@
     </div>
     <div class="notification1">
       <div class="image warning-bg">
-        <img src="assets/images/products/MLisR.jpg" alt="Imagen del álbum" class="album-image" />
+        <img src="assets/images/products/MLIRRR.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
       </div>
       <a href="#0" class="content">
         <h6>Album: Modern Life is Rubbish</h6>
@@ -1150,18 +1159,15 @@
         </p>
       </a>
 
-      <!--Aqui voy a modificar lo del album modern life de blur-->
-       <!-- Botón para mostrar los detalles adicionales -->
        <button class="details-btn1" onclick="toggleDetails1()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
        <div class="details1" id="album-details1">
            <h4>Detalles del Producto</h4>
            <div class="detail-item1">
                <span class="label">Nombre:</span> <span class="value">Modern Life Is Rubbish</span>
            </div>
            <div class="detail-item1">
-               <span class="label">Precio:</span> <span class="value">$00.00</span>
+               <span class="label">Precio:</span> <span class="value">$200.00</span>
            </div>
            <div class="detail-item1">
                <span class="label">Cantidad en Stock:</span> <span class="value">5 unidades</span>
@@ -1185,6 +1191,157 @@
                    <li><strong>Villa Rosie</strong></li>
                    <li><strong>Coping</strong></li>
                    <li><strong>Oily Water</strong></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+   
+   <style>
+     .notification1 {
+         position: relative;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         padding: 15px;
+         margin: 10px;
+         max-width: 400px;
+         font-family: Arial, sans-serif;
+     }
+ 
+     .details1 {
+         display: none;
+         font-size: 0.9em;
+         color: #333;
+         margin-top: 15px;
+         padding: 15px;
+         border-top: 1px solid #ddd;
+         border-radius: 8px;
+         max-width: 800px; 
+         background-color: #f9f9f9;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     }
+ 
+     .details h4 {
+         margin-top: 0;
+         font-size: 1.1em;
+         color: #444;
+         border-bottom: 1px solid #ddd;
+         padding-bottom: 5px;
+     }
+ 
+     .detail-item1 {
+         display: flex;
+         margin-top: 8px;
+         font-size: 0.95em;
+     }
+ 
+     .detail-item1 .label {
+         font-weight: bold;
+         width: 120px; 
+         color: #555;
+     }
+ 
+     .detail-item1 .value {
+         color: #333;
+     }
+ 
+     .song-list1 {
+         padding-left: 20px;
+         list-style-type: disc;
+         color: #444;
+         margin: 5px 0;
+     }
+ 
+     .details-btn1 {
+         background-color: #007bff;
+         color: white;
+         border: none;
+         padding: 8px 12px;
+         cursor: pointer;
+         border-radius: 4px;
+         font-size: 0.9em;
+         margin-top: 10px;
+     }
+
+     .single-notification1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; 
+}
+ </style>
+ 
+ <script>
+     function toggleDetails1() {
+         const details1 = document.getElementById("album-details1");
+         if (details1.style.display === "none" || details1.style.display === "") {
+             details1.style.display = "block";
+         } else {
+             details1.style.display = "none";
+         }
+     }
+ </script>
+
+    </div>
+    <div class="action">
+      <button class="delete-btn">
+        <i class="lni lni-trash-can"></i>
+      </button>
+      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="lni lni-more-alt"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+        <li class="dropdown-item">
+          <a href="#0" class="text-gray">Modificar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card-style">
+  <div class="single-notification1">
+    <div class="checkbox">
+      <div class="form-check checkbox-style mb-20">
+        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+      </div>
+    </div>
+    <div class="notification1">
+      <div class="image warning-bg">
+        <img src="assets/images/products/black sabbath.jpg" alt="Imagen del álbum" class="album-image" style="width: 350px; height: auto;" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Black Sabbath</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Black Sabbath</strong><br>
+          Año: <strong id="album-artist">1970</strong><br>
+          Stock: <strong id="album-year">40</strong>
+        </p>
+    </a>
+
+       <button class="details-btn1" onclick="toggleDetails1()">Detalles</button>
+      
+       <div class="details1" id="album-details1">
+           <h4>Detalles del Producto</h4>
+           <div class="detail-item1">
+               <span class="label">Nombre:</span> <span class="value">Black Sabbath</span>
+           </div>
+           <div class="detail-item1">
+               <span class="label">Precio:</span> <span class="value">$200.00</span>
+           </div>
+           <div class="detail-item1">
+               <span class="label">Cantidad en Stock:</span> <span class="value">40 unidades</span>
+           </div>
+           <div class="detail-item1">
+               <span class="label">Descripción: </span> 
+               <span class="value"> Álbum debut de la banda Black Sabbath, lanzado en 1970. Considerado uno de los primeros álbumes de heavy metal.</span>
+           </div>
+           <div class="detail-item1">
+               <span class="label">Lista de Canciones:</span>
+               <ul class="song-list1">
+                <li><strong>Black Sabbath</strong></li>
+                <li><strong>The Wizard</strong></li>
+                <li><strong>Behind the Wall of Sleep</strong> </li>
+                <li><strong>N.I.B.</strong></li>
                </ul>
            </div>
        </div>
@@ -1260,7 +1417,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px; /* Espaciado alrededor de cada tarjeta */
+    margin: 10px; 
 }
  </style>
  
@@ -1274,156 +1431,8 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del album modern life de-->
 
     </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="card-style">
-  <div class="single-notification">
-    <div class="checkbox">
-      <div class="form-check checkbox-style mb-20">
-        <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
-      </div>
-    </div>
-    <!--Aqui voy a modificar-->
-
-    <div class="notification">
-      <div class="image warning-bg">
-          <img src="assets/images/products/black sabbath.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-          <h6>Album: Black Sabbath</h6>
-          <p class="text-sm text-gray">
-            Artista: <strong id="album-title">Black Sabbath</strong><br>
-            Año: <strong id="album-artist">1970</strong><br>
-            Stock: <strong id="album-year">40</strong>
-          </p>
-      </a>
-      
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn" onclick="toggleDetails()">Detalles</button>
-      
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details" id="album-details">
-          <h4>Detalles del Producto</h4>
-          <div class="detail-item">
-              <span class="label">Nombre:</span> <span class="value">Black Sabbath</span>
-          </div>
-          <div class="detail-item">
-              <span class="label">Precio:</span> <span class="value">$20.00</span>
-          </div>
-          <div class="detail-item">
-              <span class="label">Cantidad en Stock:</span> <span class="value">40 unidades</span>
-          </div>
-          <div class="detail-item">
-              <span class="label">Descripción:</span> 
-              <span class="value">Álbum debut de la banda Black Sabbath, lanzado en 1970. Considerado uno de los primeros álbumes de heavy metal.</span>
-          </div>
-          <div class="detail-item">
-              <span class="label">Lista de Canciones:</span>
-              <ul class="song-list">
-                  <li><strong>Black Sabbath</strong></li>
-                  <li><strong>The Wizard</strong></li>
-                  <li><strong>Behind the Wall of Sleep</strong> </li>
-                  <li><strong>N.I.B.</strong></li>
-              </ul>
-          </div>
-      </div>
-  </div>
-  
-  <style>
-    .notification {
-        position: relative;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 15px;
-        margin: 10px;
-        max-width: 400px;
-        font-family: Arial, sans-serif;
-    }
-
-    .details {
-        display: none;
-        font-size: 0.9em;
-        color: #333;
-        margin-top: 15px;
-        padding: 15px;
-        border-top: 1px solid #ddd;
-        border-radius: 8px;
-        max-width: 800px; /* Ancho máximo ajustado */
-        background-color: #f9f9f9;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .details h4 {
-        margin-top: 0;
-        font-size: 1.1em;
-        color: #444;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 5px;
-    }
-
-    .detail-item {
-        display: flex;
-        margin-top: 8px;
-        font-size: 0.95em;
-    }
-
-    .detail-item .label {
-        font-weight: bold;
-        width: 120px; /* Ajuste de ancho para alinear etiquetas */
-        color: #555;
-    }
-
-    .detail-item .value {
-        color: #333;
-    }
-
-    .song-list {
-        padding-left: 20px;
-        list-style-type: disc;
-        color: #444;
-        margin: 5px 0;
-    }
-
-    .details-btn {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 8px 12px;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 0.9em;
-        margin-top: 10px;
-    }
-</style>
-
-<script>
-    function toggleDetails() {
-        const details = document.getElementById("album-details");
-        if (details.style.display === "none" || details.style.display === "") {
-            details.style.display = "block";
-        } else {
-            details.style.display = "none";
-        }
-    }
-</script>
-    <!--Aqui deje de modificar-->
     <div class="action">
       <button class="delete-btn">
         <i class="lni lni-trash-can"></i>
@@ -1469,11 +1478,10 @@
                               Precio: <strong id="album-year">$1150</strong>
                             </p>
                           </a>
-                           <!--Aqui voy a modificar lo del primer tocadiscos-->
-       <!-- Botón para mostrar los detalles adicionales -->
+                           
        <button class="details-btn6" onclick="toggleDetails6()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
+     
        <div class="details6" id="album-details6">
            <h4>Detalles del Producto</h4>
            <div class="detail-item6">
@@ -1522,7 +1530,7 @@
          padding: 15px;
          border-top: 1px solid #ddd;
          border-radius: 8px;
-         max-width: 800px; /* Ancho máximo ajustado */
+         max-width: 800px; 
          background-color: #f9f9f9;
          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
      }
@@ -1543,7 +1551,7 @@
  
      .detail-item6 .label {
          font-weight: bold;
-         width: 120px; /* Ajuste de ancho para alinear etiquetas */
+         width: 120px; 
          color: #555;
      }
  
@@ -1579,7 +1587,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Espaciado alrededor de cada tarjeta */
+    margin: 0 auto; 
 }
  </style>
  
@@ -1593,7 +1601,6 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del primer tocadiscos-->
 
                         </div>
                         <div class="action">
@@ -1631,11 +1638,9 @@
                               Precio: <strong id="album-year">$1300</strong>
                             </p>
                           </a>
-       <!--Aqui voy a modificar lo del segundo tocadiscos-->
-       <!-- Botón para mostrar los detalles adicionales -->
+
        <button class="details-btn7" onclick="toggleDetails7()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
        <div class="details7" id="album-details7">
            <h4>Detalles del Producto</h4>
            <div class="detail-item7">
@@ -1704,7 +1709,7 @@
  
      .detail-item7 .label {
          font-weight: bold;
-         width: 120px; /* Ajuste de ancho para alinear etiquetas */
+         width: 120px; 
          color: #555;
      }
  
@@ -1740,7 +1745,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Espaciado alrededor de cada tarjeta */
+    margin: 0 auto; 
 }
  </style>
  
@@ -1754,15 +1759,12 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del segundo tocadiscos-->
-
-
                         </div>
                         <div class="action">
                           <button class="delete-btn">
                             <i class="lni lni-trash-can"></i>
                           </button>
-                          <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="lni lni-more-alt"></i>
                           </button>
                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
@@ -1792,11 +1794,9 @@
                               Precio: <strong id="album-year">$ 1500</strong>
                             </p>
                           </a>
-       <!--Aqui voy a modificar lo del tercer tocadiscos-->
-       <!-- Botón para mostrar los detalles adicionales -->
+
        <button class="details-btn8" onclick="toggleDetails8()">Detalles</button>
       
-       <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
        <div class="details8" id="album-details8">
            <h4>Detalles del Producto</h4>
            <div class="detail-item8">
@@ -1844,7 +1844,7 @@
          padding: 15px;
          border-top: 1px solid #ddd;
          border-radius: 8px;
-         max-width: 800px; /* Ancho máximo ajustado */
+         max-width: 800px; 
          background-color: #f9f9f9;
          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
      }
@@ -1865,7 +1865,7 @@
  
      .detail-item8 .label {
          font-weight: bold;
-         width: 120px; /* Ajuste de ancho para alinear etiquetas */
+         width: 120px; 
          color: #555;
      }
  
@@ -1901,7 +1901,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Espaciado alrededor de cada tarjeta */
+    margin: 0 auto;
 }
  </style>
  
@@ -1915,8 +1915,6 @@
          }
      }
  </script>
-     <!--Aqui deje de modificar lo del tercer tocadiscos-->
-
 
                         </div>
                         <div class="action">
