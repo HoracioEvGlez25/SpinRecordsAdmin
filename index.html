@@ -150,7 +150,7 @@
             </div>
             <div class="col-lg-7 col-md-7 col-6">
               <div class="header-right">
-                <!-- notification start -->
+  
                 <div class="notification-box ml-15 d-none d-md-flex">
                   <button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -810,235 +810,231 @@
                   </div>
                   <canvas id="Chart4" style="width: 100%; height: 420px; margin-left: -35px;"></canvas>
                 </div>
-                <!-- End Chart -->
               </div>
             </div>
-            <!-- End Col -->
           </div>
-          <!-- End Row -->
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="card-style calendar-card mb-30">
-                <div id="calendar-mini"></div>
-              </div>
-            </div>
-            <!-- End Col -->
-            <div class="col-lg-7">
-              <div class="card-style mb-30">
-                <div class="title d-flex flex-wrap align-items-center justify-content-between">
-                  <div class="left">
-                    <h6 class="text-medium mb-30">Historial de ventas</h6>
-                  </div>
-                  <div class="right">
-                    <div class="select-style-1">
-                      <div class="select-position select-sm">
-                        <select class="light-bg">
-                          <option value="">Hoy</option>
-                          <option value="">Ayer</option>
-                        </select>
-                      </div>
+          
+          <div class="col-lg-12">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                <div class="left">
+                  <h6 class="text-medium mb-30">Historial de ventas</h6>
+                </div>
+                <div class="right">
+                  <div class="select-style-1">
+                    <div class="select-position select-sm">
+                      <select class="light-bg">
+                        <option value="">Hoy</option>
+                        <option value="">Ayer</option>
+                      </select>
                     </div>
-                    <!-- end select -->
                   </div>
                 </div>
-                <!-- End Title -->
-                <div class="table-responsive">
-                  <table class="table top-selling-table">
-                    <thead>
-                      <tr>
-                        <th>
-                          <h6 class="text-sm text-medium">Productos</h6>
-                        </th>
-                        <th class="min-width">
-                          <h6 class="text-sm text-medium">
-                            Categoria <i class="lni lni-arrows-vertical"></i>
-                          </h6>
-                        </th>
-                        <th class="min-width">
-                          <h6 class="text-sm text-medium">
-                            Ingresos <i class="lni lni-arrows-vertical"></i>
-                          </h6>
-                        </th>
-                        <th class="min-width">
-                          <h6 class="text-sm text-medium">
-                              Estado <i class="lni lni-arrows-vertical"></i>
-                          </h6>
-                        </th>
-                        <th>
-                          <h6 class="text-sm text-medium text-end">
-                            Acciones <i class="lni lni-arrows-vertical"></i>
-                          </h6>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img src="assets/images/products/TTTT.jpg" alt="" />
-                            </div>
-                            <p class="text-sm">Tocadisco clásico </p>
+              </div>
+          
+              <div class="table-responsive">
+                <table class="table top-selling-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <h6 class="text-sm text-medium">Productos</h6>
+                      </th>
+                      <th class="min-width">
+                        <h6 class="text-sm text-medium">
+                          Categoria <i class="lni lni-arrows-vertical"></i>
+                        </h6>
+                      </th>
+                      <th class="min-width">
+                        <h6 class="text-sm text-medium">
+                          Ingresos <i class="lni lni-arrows-vertical"></i>
+                        </h6>
+                      </th>
+                      <th class="min-width">
+                        <h6 class="text-sm text-medium">
+                          Estado <i class="lni lni-arrows-vertical"></i>
+                        </h6>
+                      </th>
+                      <th class="min-width">
+                        <h6 class="text-sm text-medium">Usuario</h6>
+                      </th>
+                      <th>
+                        <h6 class="text-sm text-medium text-end">
+                          Acciones <i class="lni lni-arrows-vertical"></i>
+                        </h6>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="product">
+                          <div class="image">
+                            <img src="assets/images/products/TTTT.jpg" alt="" />
                           </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Tocadisco Semi-automático</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$1500</p>
-                        </td>
-                        <td>
-                          <span class="status-btn close-btn">Pendiente</span>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button class="edit">
-                              <i class="lni lni-pencil"></i>
-                            </button>
-                            <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Quitar</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Editar</a>
-                              </li>
-                            </ul>
+                          <p class="text-sm">Tocadisco clásico</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm">Tocadisco Semi-automático</p>
+                      </td>
+                      <td>
+                        <p class="text-sm">$1500</p>
+                      </td>
+                      <td>
+                        <span class="status-btn close-btn">Pendiente</span>
+                      </td>
+                      <td>
+                        <p class="text-sm">Juan Pérez</p>
+                      </td>
+                      <td>
+                        <div class="action justify-content-end">
+                          <button class="edit">
+                            <i class="lni lni-pencil"></i>
+                          </button>
+                          <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Quitar</a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Editar</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product">
+                          <div class="image">
+                            <img src="assets/images/products/T.jpg" alt="" />
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img src="assets/images/products/T.jpg" alt="" />
-                            </div>
-                            <p class="text-sm">Tocadisco vintage</p>
+                          <p class="text-sm">Tocadisco vintage</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm">Tocadisco Manual</p>
+                      </td>
+                      <td>
+                        <p class="text-sm">$1150</p>
+                      </td>
+                      <td>
+                        <span class="status-btn warning-btn">Reembolso</span>
+                      </td>
+                      <td>
+                        <p class="text-sm">María López</p>
+                      </td>
+                      <td>
+                        <div class="action justify-content-end">
+                          <button class="edit">
+                            <i class="lni lni-pencil"></i>
+                          </button>
+                          <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Remove</a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Edit</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product">
+                          <div class="image">
+                            <img src="assets/images/products/GG.jpg" alt="" />
                           </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Tocadisco Manual</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$1150</p>
-                        </td>
-                        <td>
-                          <span class="status-btn warning-btn">Reembolso</span>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button class="edit">
-                              <i class="lni lni-pencil"></i>
-                            </button>
-                            <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Remove</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Edit</a>
-                              </li>
-                            </ul>
+                          <p class="text-sm">Gorillaz</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm">Hip-Hop</p>
+                      </td>
+                      <td>
+                        <p class="text-sm">$300</p>
+                      </td>
+                      <td>
+                        <span class="status-btn success-btn">Completed</span>
+                      </td>
+                      <td>
+                        <p class="text-sm">Carlos Gómez</p>
+                      </td>
+                      <td>
+                        <div class="action justify-content-end">
+                          <button class="edit">
+                            <i class="lni lni-pencil"></i>
+                          </button>
+                          <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Quitar</a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Editar</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="product">
+                          <div class="image">
+                            <img src="assets/images/products/Humbug.jpg" alt="" />
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img src="assets/images/products/GG.jpg" alt="" />
-                            </div>
-                            <p class="text-sm">Gorillaz</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Hip-Hop</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$300</p>
-                        </td>
-                        <td>
-                          <span class="status-btn success-btn">Completed</span>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button class="edit">
-                              <i class="lni lni-pencil"></i>
-                            </button>
-                            <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Quitar</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Editar</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img src="assets/images/products/Humbug.jpg" alt="" />
-                            </div>
-                            <p class="text-sm">Humbug</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Rock</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$300</p>
-                        </td>
-                        <td>
-                          <span class="status-btn close-btn">Canceled</span>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button class="edit">
-                              <i class="lni lni-pencil"></i>
-                            </button>
-                            <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Quitar</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Editar</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- End Table -->
-                </div>
+                          <p class="text-sm">Humbug</p>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm">Rock</p>
+                      </td>
+                      <td>
+                        <p class="text-sm">$300</p>
+                      </td>
+                      <td>
+                        <span class="status-btn close-btn">Canceled</span>
+                      </td>
+                      <td>
+                        <p class="text-sm">Ana Ruiz</p>
+                      </td>
+                      <td>
+                        <div class="action justify-content-end">
+                          <button class="edit">
+                            <i class="lni lni-pencil"></i>
+                          </button>
+                          <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="lni lni-more-alt"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Quitar</a>
+                            </li>
+                            <li class="dropdown-item">
+                              <a href="#0" class="text-gray">Editar</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <!-- End Col -->
           </div>
-          <!-- End Row -->
-        </div>
-        <!-- end container -->
-      </section>
-      <!-- ========== section end ========== -->
-
-    <!-- ========= All Javascript files linkup ======== -->
+          
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/dynamic-pie-chart.js"></script>

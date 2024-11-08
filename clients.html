@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="assets/css/fullcalendar.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-
   </head>
   <body>
     <div id="preloader">
@@ -341,14 +340,156 @@
               </div>
             </div>
           </div>
-
-          <div class="header-right">
-            <button class="btn btn-primary" id="add-user-button" aria-label="Agregar Usuario">
-              <i class="mdi mdi-account-plus"></i> Agregar Usuario
-            </button>
-            <p></p>
-
-          <div class="card-style">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Clientes</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <style>
+              /* Estilos de tarjeta de cliente */
+              .cliente-card {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                border-bottom: 1px solid #e0e0e0;
+                margin-bottom: 10px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                position: relative;
+              }
+          
+              /* Estilo del avatar con la inicial */
+              .cliente-avatar {
+                width: 40px;
+                height: 40px;
+                background-color: #ffcc00;
+                color: #fff;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 18px;
+                margin-right: 15px;
+              }
+          
+              /* Información del cliente */
+              .cliente-info {
+                flex: 1;
+                color: #333;
+              }
+          
+              .cliente-titulo {
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+              }
+          
+              .cliente-info p {
+                margin: 0;
+                font-size: 14px;
+                color: #666;
+              }
+          
+              .cliente-time {
+                font-size: 12px;
+                color: #999;
+                margin-top: 5px;
+              }
+          
+              /* Botón de eliminación */
+              .cliente-delete {
+                font-size: 20px;
+                color: #d9534f;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+              }
+            </style>
+          </head>
+          <body>
+          
+            <!-- Botón para mostrar el formulario de agregar cliente -->
+            <div class="container mt-4 text-end">
+              <button onclick="mostrarFormulario()" class="btn btn-primary">Agregar Cliente</button>
+            </div>
+          
+            <!-- Formulario de agregar cliente -->
+            <section id="addClient" style="display: none;" class="mt-5">
+              <div class="container">
+                <h2>Agregar Cliente</h2>
+                <form onsubmit="guardarCliente(event)">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="address" name="address">
+                  </div>
+                  <button type="submit" class="btn btn-success">Guardar Cliente</button>
+                  <button type="button" class="btn btn-secondary" onclick="ocultarFormulario()">Cancelar</button>
+                </form>
+              </div>
+            </section>
+          
+            <!-- Sección para mostrar la lista de clientes -->
+            <div class="container mt-5">
+              <h3>Lista de Clientes</h3>
+              <div id="listaClientes"></div>
+            </div>
+          
+            <script src="app.js"></script>
+            
+            <div class="card-style">
+              <div class="single-notification">
+                <div class="checkbox">
+                  <div class="form-check checkbox-style mb-20">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+                  </div>
+                </div>
+                <div class="notification">
+                  <div class="image warning-bg">
+                    <span>J</span>
+                  </div>
+                  <a href="#0" class="content">
+                    <h6>Nuevo cliente agregado</h6>
+                    <p class="text-sm text-gray">
+                      Nombre: <strong id="Nombre-title">Jose</strong><br>
+                      Email: <strong id="Email-artist"> jose@gmail</strong><br>
+                      Telefono: <strong id="Telefono-year">4495341526</strong><br>
+                      Domicilio: <strong id="Domicilio-year">av paseo de san antonio #42</strong>
+                    </p>
+                    <span class="text-sm text-medium text-gray">Hace 10 min</span>
+                  </a>
+                </div>
+                <div class="action">
+                  <button class="delete-btn">
+                    <i class="lni lni-trash-can"></i>
+                  </button>
+                  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="lni lni-more-alt"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                    <li class="dropdown-item">
+                      <a href="#0" class="text-gray">Marcar como leído</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </body>                               
+                    <div class="card-style">
             <div class="single-notification">
               <div class="checkbox">
                 <div class="form-check checkbox-style mb-20">
@@ -357,17 +498,17 @@
               </div>
               <div class="notification">
                 <div class="image warning-bg">
-                  <span>P</span>
+                  <span>J</span>
                 </div>
                 <a href="#0" class="content">
                   <h6>Nuevo cliente agregado</h6>
-                  <p class="text-sm text-gray">
-                    Nombre: <strong id="album-title">Pedro Mártinez</strong><br>
-                    Correo: <strong id="album-artist"> QWERT@gmail.com</strong><br>
-                    Domicilio: <strong id="album-year">MIGUEL ANGEL 411, JARDINES DE ORIENTE, 37257</strong><br>
-                    Fecha de registro: <strong id="album-year">05/11/2024</strong>
+                    <p class="text-sm text-gray">
+                      Nombre: <strong id="Nombre-title">Luis</strong><br>
+                      Email: <strong id="Email-artist"> Luis@gmail</strong><br>
+                      Telefono: <strong id="Telefono-year">4495377826</strong><br>
+                      Domicilio: <strong id="Domicilio-year">maria bocanegrea #321 </strong>
                   </p>
-                  <span class="text-sm text-medium text-gray">Hace 5 min</span>
+                  <span class="text-sm text-medium text-gray">Hace 20 min</span>
                 </a>
               </div>
               <div class="action">
@@ -381,9 +522,54 @@
                   <li class="dropdown-item">
                     <a href="#0" class="text-gray">Marcar como leído</a>
                   </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-style">
+            <div class="single-notification">
+              <div class="checkbox">
+                <div class="form-check checkbox-style mb-20">
+                  <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
+                </div>
+              </div>
+              <div class="notification">
+                <div class="image warning-bg">
+                  <span>J</span>
+                </div>
+                <a href="#0" class="content">
+                  <h6>Nuevo cliente agregado</h6>
+                    <p class="text-sm text-gray">
+                      Nombre: <strong id="Nombre-title">Maria fernanda</strong><br>
+                      Email: <strong id="Email-artist"> Maria@gmail</strong><br>
+                      Telefono: <strong id="Telefono-year">44953123526</strong><br>
+                      Domicilio: <strong id="Domicilio-year">calvillo rosales #615</strong>
+                  </p>
+                  <span class="text-sm text-medium text-gray">Hace 25 min</span>
+                </a>
+              </div>
+              <div class="action">
+                <button class="delete-btn">
+                  <i class="lni lni-trash-can"></i>
+                </button>
+                <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="lni lni-more-alt"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
                   <li class="dropdown-item">
-                    <a href="#0" class="text-gray">Responder</a>
+                    <a href="#0" class="text-gray">Marcar como leído</a>
                   </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                  <li class="dropdown-item">
+                    <a href="#0" class="text-gray">Marcar como leído</a>
+                  </li>
+                  
                 </ul>
               </div>
             </div>
