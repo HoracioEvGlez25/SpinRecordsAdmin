@@ -24,6 +24,6 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: 2bc3f577e13618fe98c2a52766348157a35b32dd8a31db5e4d4fb280b8cf393605-69acc4c1-8e90-4e9a-b3b9-2536378b8c3b01e052500c065e1e
-          app_location: "/"  # Cambia si tu código está en una subcarpeta
-          api_location: ""   # Deja en blanco si no tienes una API
-          output_location: "." # Ajusta según tu configuración
+          app_location: "/"  # Codigo index
+          api_location: ""   # Api
+          output_location: "." # Carpeta
