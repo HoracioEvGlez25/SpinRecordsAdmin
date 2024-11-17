@@ -1,3 +1,6 @@
+/*===========================
+		COMMON css
+===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
   scroll-behavior: smooth;
@@ -7,9 +10,9 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: normal;
   font-style: normal;
-  color: #000000;
+  color: #5d657b;
   overflow-x: hidden;
-  background: #e8e8f0;
+  background: #f1f5f9;
 }
 
 * {
@@ -284,7 +287,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  color: #050506;
+  color: #1A2142;
   margin: 0;
 }
 
@@ -520,8 +523,8 @@ h6,
 
 /* primary buttons */
 .primary-btn {
-  background: #ffffff;
-  color: #000000;
+  background: #365CF5;
+  color: #fff;
 }
 .primary-btn:hover {
   color: #fff;
@@ -2684,10 +2687,9 @@ h6,
   border-color: #2f3546;
 }
 
-/* ========== header css ========== */
 .header {
   padding: 22px 0;
-  background: #85b1e7;
+  background: rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   z-index: 99;
@@ -2706,7 +2708,7 @@ h6,
 .header .header-left .header-search form input {
   width: 100%;
   border: 1px solid #efefef;
-  background: rgb(250, 248, 248);
+  background: rgba(239, 239, 239, 0.5);
   border-radius: 8px;
   padding: 10px 10px 10px 44px;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2716,7 +2718,7 @@ h6,
   transition: all 0.3s ease-out 0s;
 }
 .header .header-left .header-search form input:focus {
-  border-color: #607df1;
+  border-color: #365CF5;
   background: #fff;
 }
 .header .header-left .header-search form button {
@@ -2737,8 +2739,8 @@ h6,
   justify-content: flex-end;
 }
 .header .header-right button {
-  border: 1px solid #030303;
-  background: #5f5c5c;
+  border: 1px solid #F6F6F6;
+  background: #F6F6F6;
   border-radius: 50%;
   height: 46px;
   width: 46px;
@@ -2746,7 +2748,7 @@ h6,
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #fafbfe;
+  color: #1A2142;
 }
 .header .header-right button svg {
   fill: currentColor;
@@ -2794,7 +2796,7 @@ h6,
   z-index: 2;
 }
 .header .header-right .dropdown-menu li:hover a {
-  color: #e8e8ec;
+  color: #365CF5;
   background: #f3f3f3;
 }
 .header .header-right .dropdown-menu li:last-child {
@@ -2861,7 +2863,7 @@ h6,
   min-width: 190px;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 0 rgba(246, 242, 242, 0), 0 0 rgba(247, 246, 246, 0), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 0 16px rgba(0, 0, 0, 0.1);
   padding: 8px;
 }
 .header .header-right .profile-box .dropdown-menu.dropdown-menu-end {
@@ -2947,9 +2949,9 @@ h6,
   align-items: center;
 }
 .header .header-right .profile-box .profile-info .info .image {
-  border: 1px solid #070809;
-  width: 40px;
-  height: 40px;
+  border: 1px solid #DFE5EF;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   margin-right: 14px;
   position: relative;
@@ -2963,7 +2965,6 @@ h6,
   text-align: left;
 }
 
-/* ========== Dashboards css ================= */
 @media (max-width: 767px) {
   #doughnutChart1 {
     height: 250px !important;
