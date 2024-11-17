@@ -3615,7 +3615,7 @@ h6,
 
 /* =========== Sidebar css =========== */
 .sidebar-nav-wrapper {
-  background: #fff;
+  background: #011630;
   width: 250px;
   padding: 20px 0px;
   height: 100vh;
@@ -3633,8 +3633,8 @@ h6,
   transition: all 0.3s ease-out 0s;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
+  -ms-transform: translateX(0);  
+  -o-transform: translateX(0); 
   transform: translateX(0);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -3682,7 +3682,7 @@ h6,
   position: relative;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a {
-  color: #1A2142;
+  color: #f4f4f6;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a:not(.collapsed) .icon {
   color: #365CF5;
@@ -3735,7 +3735,7 @@ h6,
   align-items: center;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li a.active, .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li a:hover {
-  color: #1A2142;
+  color: #edeef5;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li a i {
   font-size: 16px;

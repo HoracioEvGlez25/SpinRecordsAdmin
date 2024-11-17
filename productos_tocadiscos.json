@@ -35,7 +35,7 @@
            "stock": "200",
             "imageUrl": "assets/images/products/GG.jpg",
             "price": "$300.00",
-            "genre": "Hip Hop"
+            "genre": "Alternative"
         },
         {
            "id": 5,
@@ -56,13 +56,58 @@
             "genre": "Rock"
         },
         {
-            "id": 4,
-            "title": "Tocadiscos Clásico",
-            "artist": "Technics",
-            "stock": "$1500",
-            "imageUrl": "assets/images/products/revolver.jpg",
+            "id": 7,
+            "title": "Revolver",
+            "artist": "The Beatles",
+            "stock": "123",
+            "imageUrl": "assets/images/products/rev.jpg",
             "price": "$300.00",
             "genre": "Rock"
+        },
+        {
+            "id": 8,
+            "title": "Black",
+            "artist": "Pearl Jam",
+            "stock": "134",
+            "imageUrl": "assets/images/black/.jpg",
+            "price": "$250.00",
+            "genre": "Heavy-metal"
+        },
+        {
+            "id": 9,
+            "title": "Black Sabbath",
+            "artist": "Black Sabbath",
+            "stock": "36",
+            "imageUrl": "assets/images/products/black sabbath.jpg",
+            "price": "$250.00",
+            "genre": "Grunge"
+        },
+        {
+            "id": 10,
+            "title": "Romance",
+            "artist": "Fontainces D.C.",
+            "stock": "39",
+            "imageUrl": "assets/images/products/Romance.jpg",
+            "price": "$350.00",
+            "genre": "Post-Punk"
+        },
+        {
+            "id": 11,
+            "title": "Ok Computer",
+            "artist": "Radiohead",
+            "stock": "135",
+            "imageUrl": "assets/images/products/OKC.jpg",
+            "price": "$300.00",
+            "genre": "Alternative"
+        },
+        {
+            "id": 12,
+            "title": "13",
+            "artist": "Blur",
+            "stock": "131",
+            "imageUrl": "assets/images/products/13B.jpg",
+            "price": "$250.00",
+            "genre": "Alternative"
         }
     ],
     "tocadiscos": [
