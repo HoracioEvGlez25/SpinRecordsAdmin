@@ -1608,6 +1608,386 @@ function toggleDetails7() {
   </div>
 </div>
 
+<!--Aqui agregue el album Ok Computer-->
+<div class="card-style">
+  <div class="single-notification">
+    <div class="notification1">
+      <div class="image warning-bg">
+        <img src="assets/images/products/OKC.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: Ok Computer</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Radiohead</strong><br>
+          Año: <strong id="album-artist">2007</strong><br>
+          Stock: <strong id="album-year">123</strong>
+        </p>
+      </a>
+
+      <!-- Botón para mostrar los detalles adicionales -->
+      <button class="details-btn1" onclick="toggleDetails1()">Detalles</button>
+
+      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
+      <div class="details1" id="album-details1">
+        <h4>Detalles del Producto</h4>
+        <div class="details-grid">
+          <div class="detail-item2">
+            <span class="label">Nombre:</span> <span class="value">Ok Computer</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Precio:</span> <span class="value">$300.00</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Cantidad en Stock:</span> <span class="value">123 unidades</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Descripción:</span> 
+            <span class="value">OK Computer es el tercer álbum de estudio de la banda británica de rock alternativo Radiohead, lanzado el 21 de mayo de 1997 a través de las subsidiarias de EMI Parlophone y Capitol Records</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Lista de Canciones:</span>
+            <ul class="song-list2">
+              <li><strong>AirBag</strong></li>
+              <li><strong>Paranoid Android</strong></li>
+              <li><strong>Subterranean Homesick Alien</strong></li>
+              <li><strong>Exit Music (For a Film)</strong></li>
+              <li><strong>Let Down</strong></li>
+              <li><strong>Karma Police</strong></li>
+              <li><strong>Fitter Happier</strong></li>
+              <li><strong>Electioneering</strong></li>
+              <li><strong>Climbing Up the Walls</strong></li>
+              <li><strong>No Surprises</strong></li>
+              <li><strong>Lucky</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Diseño general */
+.card-style {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%; /* Abarca todo el ancho disponible */
+  max-width: 1200px; /* Ancho máximo */
+}
+
+.single-notification {
+  width: 100%;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.notification1 {
+  border: 10px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 900px;
+}
+
+/* Imagen */
+.album-image {
+  display: block;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene las proporciones */
+  margin-bottom: 10px;
+  border-radius: 8px;
+  object-fit: contain; /* Evita distorsión recortando si es necesario */
+}
+
+/* Botón de detalles */
+.details-btn1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.details-btn2:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de detalles */
+.details1 {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del contenido de detalles */
+.details2 h4 {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detail-item2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item2 .label {
+  font-weight: bold;
+  color: #555;
+}
+
+.detail-item2 .value {
+  color: #333;
+}
+
+/* Lista de canciones */
+.song-list2 {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* Imagen en detalles */
+.details2 img {
+  width: auto; /* La imagen ocupa todo el ancho disponible */
+  max-height: 300px;/*Ajusta el tamaño maximo de la imagen */
+  height: auto; /* Mantiene las proporciones originales */
+  object-fit: contain; /* Evita distorsión */
+  border-radius: 8px; /* Bordes uniformes */
+  margin-bottom: 15px;
+}
+</style>
+
+<script>
+function toggleDetails1() {
+  const details3 = document.getElementById("album-details1");
+  details3.style.display = details3.style.display === "block" ? "none" : "block";
+}
+</script>
+
+<!--Aqui termine de modificar el album Ok Coputer-->
+</div>
+<div class="action">
+  <button class="delete-btn">
+    <i class="lni lni-trash-can"></i>
+  </button>
+  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="lni lni-more-alt"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+    <li class="dropdown-item">
+      <a href="#0" class="text-gray">Modificar</a>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+
+<!--Aqui comence con la modificacion del album 13-->
+<div class="card-style">
+  <div class="single-notification">
+    <div class="notification11">
+      <div class="image warning-bg">
+        <img src="assets/images/products/13B.jpg" alt="Imagen del álbum" class="album-image" />
+      </div>
+      <a href="#0" class="content">
+        <h6>Album: 13</h6>
+        <p class="text-sm text-gray">
+          Artista: <strong id="album-title">Blur</strong><br>
+          Año: <strong id="album-artist">1999</strong><br>
+          Stock: <strong id="album-year">123</strong>
+        </p>
+      </a>
+
+      <!-- Botón para mostrar los detalles adicionales -->
+      <button class="details-btn11" onclick="toggleDetails11()">Detalles</button>
+
+      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
+      <div class="details11" id="album-details11">
+        <h4>Detalles del Producto</h4>
+        <div class="details-grid">
+          <div class="detail-item2">
+            <span class="label">Nombre:</span> <span class="value">13</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Precio:</span> <span class="value">$300.00</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Cantidad en Stock:</span> <span class="value">123 unidades</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Descripción:</span> 
+            <span class="value">13 es el sexto álbum de estudio de la banda británica de rock alternativo Blur, lanzado el 15 de marzo de 1999</span>
+          </div>
+          <div class="detail-item2">
+            <span class="label">Lista de Canciones:</span>
+            <ul class="song-list2">
+              <li><strong>Tender</strong></li>
+              <li><strong>Bugman</strong></li>
+              <li><strong>Coffee & TV</strong></li>
+              <li><strong>Swamp Song</strong></li>
+              <li><strong>1992</strong></li>
+              <li><strong>B.L.U.R.E.M.I.</strong></li>
+              <li><strong>Battle</strong></li>
+              <li><strong>Mellow Song</strong></li>
+              <li><strong>Trailerpark</strong></li>
+              <li><strong>Caramel</strong></li>
+              <li><strong>No Distance Left to Run</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Diseño general */
+.card-style {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%; /* Abarca todo el ancho disponible */
+  max-width: 1200px; /* Ancho máximo */
+}
+
+.single-notification {
+  width: 100%;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.notification11 {
+  border: 10px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 900px;
+}
+
+/* Imagen */
+.album-image {
+  display: block;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene las proporciones */
+  margin-bottom: 10px;
+  border-radius: 8px;
+  object-fit: contain; /* Evita distorsión recortando si es necesario */
+}
+
+/* Botón de detalles */
+.details-btn11 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.details-btn2:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de detalles */
+.details11 {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del contenido de detalles */
+.details2 h4 {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detail-item2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item2 .label {
+  font-weight: bold;
+  color: #555;
+}
+
+.detail-item2 .value {
+  color: #333;
+}
+
+/* Lista de canciones */
+.song-list2 {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* Imagen en detalles */
+.details2 img {
+  width: auto; /* La imagen ocupa todo el ancho disponible */
+  max-height: 300px;/*Ajusta el tamaño maximo de la imagen */
+  height: auto; /* Mantiene las proporciones originales */
+  object-fit: contain; /* Evita distorsión */
+  border-radius: 8px; /* Bordes uniformes */
+  margin-bottom: 15px;
+}
+</style>
+
+<script>
+function toggleDetails11() {
+  const details3 = document.getElementById("album-details11");
+  details3.style.display = details3.style.display === "block" ? "none" : "block";
+}
+</script>
+
+<!--Aqui termina la modificacion del album 13-->
+</div>
+<div class="action">
+  <button class="delete-btn">
+    <i class="lni lni-trash-can"></i>
+  </button>
+  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="lni lni-more-alt"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+    <li class="dropdown-item">
+      <a href="#0" class="text-gray">Modificar</a>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+
             <div class="notification-wrapper">
               <div class="container-fluid">
                 <div class="title-wrapper pt-30">
