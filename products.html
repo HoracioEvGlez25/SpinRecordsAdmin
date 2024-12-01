@@ -372,7 +372,7 @@
               <div class="row align-items-center">
                 <div class="col-md-6">
                   <div class="title">
-                    <h2>Vinilos</h2>
+                    <h2>Vinilos - Tocadiscos</h2>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -392,2100 +392,390 @@
               </div>
             </div>
 
-            <button class="btn btn-primary" id="showFormBtn">Agregar Álbum</button>
-            <p></p>
-            <div id="albumForm" style="display:none; margin-top: 20px;">
-              <h4>Agregar Álbum</h4>
-              <p></p>
-              <form id="albumFormSubmit">
-                <div class="mb-3" style="margin-bottom: 15px;">
-                  <p></p>
-                  <label for="albumName" class="form-label">Nombre del Álbum</label>
-                  <input type="text" class="form-control" id="albumName" required>
+            <div class="admin-productos">
+              <!-- VINILOS -->
+              <section class="seccion-productos vinilos">
+                <header>
+                  <h2>Gestión de Vinilos</h2>
+                  <button class="btn agregar" onclick="mostrarFormulario('vinilo')">+ Agregar Nuevo Vinilo</button>
+                </header>
+                <div class="lista-productos">
+                  <div class="producto">
+                    <img src="assets/images/products/FWNMM.jpg" alt="Favourite Worst Nightmare" class="producto-img">
+                    <h3>Favourite Worst Nightmare</h3>
+                    <p>Año: 2007</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Favourite Worst Nightmare')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/Humbug.jpg" alt="Humbug" class="producto-img">
+                    <h3>Humbug</h3>
+                    <p>Año: 2009</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Humbug')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/13B.jpg" alt="13" class="producto-img">
+                    <h3>13</h3>
+                    <p>Año: 1999</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', '13 (Blur)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/BC.jpg" alt="Blur" class="producto-img">
+                    <h3>Blur</h3>
+                    <p>Año: 1997</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Blur (Álbum Homónimo)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/black sabbath.jpg" alt="black sabbath" class="producto-img">
+                    <h3>black sabbath</h3>
+                    <p>Año: 1970</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Black Sabbath (Álbum Homónimo)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/black.jpeg" alt="black" class="producto-img">
+                    <h3>Ten</h3>
+                    <p>Año: 1991</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Ten (Pearl Jam)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/G.jpg" alt="Gorillaz" class="producto-img">
+                    <h3>Gorillaz</h3>
+                    <p>Año: 2001</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Gorillaz (Álbum Debut)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/MLIRRR.jpg" alt="MLIRRR" class="producto-img">
+                    <h3>Modern Life is Rubbish</h3>
+                    <p>Año: 1993</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Modern Life Is Rubbish (Blur)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/OKC.jpg" alt="OKC" class="producto-img">
+                    <h3>Ok Computer</h3>
+                    <p>Año: 1997</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'OK Computer (Radiohead)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/rev.jpg" alt="rev" class="producto-img">
+                    <h3>Revolver</h3>
+                    <p>Año: 1966</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Revolver (The Beatles)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/Romance.jpg" alt="font" class="producto-img">
+                    <h3>Romance</h3>
+                    <p>Año: 2024</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'Romance (Fontaines D.C.)')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TNA.png" alt="TNA" class="producto-img">
+                    <h3>The New Abonormal</h3>
+                    <p>Año: 2020</p>
+                    <button class="btn detalles" onclick="verDetalles('vinilo', 'The New Abnormal (The Strokes)')">Ver Detalles</button>
+                  </div>
                 </div>
-                <div class="mb-3" style="margin-bottom: 15px;">
-                  <label for="artist" class="form-label">Artista</label>
-                  <input type="text" class="form-control" id="artist" required>
+              </section>
+            
+              <!-- TOCADISCOS -->
+              <section class="seccion-productos tocadiscos">
+                <header>
+                  <h2>Gestión de Tocadiscos</h2>
+                  <button class="btn agregar" onclick="mostrarFormulario('tocadisco')">+ Agregar Nuevo Tocadisco</button>
+                </header>
+                <div class="lista-productos">
+                  <div class="producto">
+                    <img src="assets/images/products/T.jpg" alt="Tocadisco Manual" class="producto-img">
+                    <h3>Tocadiscos Vintage - Sony</h3>
+                    <p>Tipo: Manual</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', 'Tocadiscos Vintage - Sony')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TDA.jpg" alt="Tocadisco Manual" class="producto-img">
+                    <h3>Tocadiscos Moderno - Technics</h3>
+                    <p>Tipo: Manual</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', 'Tocadiscos Vintage - Sony')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TDS.jpg" alt="Tocadisco Automático" class="producto-img">
+                    <h3>Tocadiscos Moderno - Audio-Technica</h3>
+                    <p>Tipo: Automático</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', ' Tocadiscos Moderno - Audio-Technica')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TDM.jpg" alt="Tocadisco Automático" class="producto-img">
+                    <h3>Tocadiscos Moderno - Technics</h3>
+                    <p>Tipo: Automático</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', 'Tocadiscos Moderno - Audio-Technica')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TTTT.jpg" alt="Tocadisco Automático" class="producto-img">
+                    <h3>Tocadiscos Clásico - Technics</h3>
+                    <p>Tipo: Semi-Automático</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', ' Tocadiscos Clásico - Technics')">Ver Detalles</button>
+                  </div>
+                  <div class="producto">
+                    <img src="assets/images/products/TDSA.png" alt="Tocadisco Automático" class="producto-img">
+                    <h3>Tocadiscos Moderno - Technics</h3>
+                    <p>Tipo: Semi-Automático</p>
+                    <button class="btn detalles" onclick="verDetalles('tocadisco', 'Tocadiscos Clásico - Technics')">Ver Detalles</button>
+                  </div>
                 </div>
-                <div class="mb-3" style="margin-bottom: 15px;">
-                  <label for="year" class="form-label">Año</label>
-                  <input type="number" class="form-control" id="year" required>
-                </div>
-                <div class="mb-3" style="margin-bottom: 15px;">
-                  <label for="stock" class="form-label">Stock</label>
-                  <input type="number" class="form-control" id="stock" required>
-                </div>
-                <div class="mb-3" style="margin-bottom: 15px;">
-                  <label for="albumImage" class="form-label">Imagen del Álbum</label>
-                  <input type="file" class="form-control" id="albumImage" accept="image/*" required>
-                </div>
-                <button type="submit" class="btn btn-success">Agregar</button>
-              </form>
+              </section>
             </div>
             
-
-                  <div id="albumsContainer" class="mt-4"></div>
-                  <script>
-                    document.getElementById('showFormBtn').addEventListener('click', function() {
-                      document.getElementById('albumForm').style.display = 'block';
-                    });
-                  
-                    document.addEventListener('DOMContentLoaded', loadAlbumsFromStorage);
-                  
-                    function loadAlbumsFromStorage() {
-                      const storedAlbums = JSON.parse(localStorage.getItem('albums')) || [];
-                      storedAlbums.forEach(album => {
-                        addAlbumToDOM(album);
-                      });
-                    }
-                  
-                    document.getElementById('albumFormSubmit').addEventListener('submit', function(event) {
-                      event.preventDefault();
-                  
-                      const albumName = document.getElementById('albumName').value;
-                      const artist = document.getElementById('artist').value;
-                      const year = document.getElementById('year').value;
-                      const stock = document.getElementById('stock').value;
-                      const albumImage = document.getElementById('albumImage').files[0];
-                  
-                      const imageURL = URL.createObjectURL(albumImage);
-                  
-                      const album = { albumName, artist, year, stock, imageURL };
-                  
-                      saveAlbumToStorage(album);
-                  
-                      addAlbumToDOM(album);
-                  
-                      document.getElementById('albumFormSubmit').reset();
-                    });
-                  
-                    function saveAlbumToStorage(album) {
-                      const storedAlbums = JSON.parse(localStorage.getItem('albums')) || [];
-                      storedAlbums.push(album);
-                      localStorage.setItem('albums', JSON.stringify(storedAlbums));
-                    }
-                  
-                    function addAlbumToDOM(album) {
-                      const albumCard = `
-                        <div class="card-style">
-                          <div class="single-notification">
-                            <div class="checkbox">
-                              <div class="form-check checkbox-style mb-20">
-                                <input class="form-check-input" type="checkbox" value="" />
-                              </div>
-                            </div>
-                            <div class="notification">
-                              <div class="image warning-bg">
-                                <img src="${album.imageURL}" alt="Imagen del álbum" class="album-image" />
-                              </div>
-                              <a href="#0" class="content">
-                                <h6>Álbum: ${album.albumName}</h6>
-                                <p class="text-sm text-gray">
-                                  Artista: <strong>${album.artist}</strong><br>
-                                  Año: <strong>${album.year}</strong><br>
-                                  Stock: <strong>${album.stock}</strong>
-                                </p>
-                              </a>
-                            </div>
-                            <div class="action">
-                              <button class="delete-btn">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                              <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="lni lni-more-alt"></i>
-                              </button>
-                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                                <li class="dropdown-item">
-                                  <a href="#0" class="text-gray">Modificar</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      `;
-                      document.getElementById('albumsContainer').innerHTML += albumCard;
-                    }
-                  </script>
-<!--Aqui comence a modificar el album Humbug-->
-
-<div class="card-style">
-  <div class="single-notification">
-    <div class="checkbox">
-      <div class="form-check checkbox-style mb-20">
-        <input class="form-check-input" type="checkbox" id="checkbox-1" />
-      </div>
-    </div>
-    <div class="notification5">
-      <div class="image warning-bg">
-        <img src="assets/images/products/Humbug.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Álbum: Humbug</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong>Arctic Monkeys</strong><br>
-          Año: <strong>2009</strong><br>
-          Stock: <strong>97</strong>
-        </p>
-      </a>
-
-      <!-- Botón de detalles -->
-      <button class="details-btn5" onclick="toggleDetails5()">Detalles</button>
-
-      <!-- Contenedor de detalles -->
-      <div class="details5" id="album-details5">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid5">
-          <div class="detail-item5">
-            <span class="label">Nombre:</span> <span class="value">Humbug</span>
-          </div>
-          <div class="detail-item5">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item5">
-            <span class="label">Cantidad en Stock:</span> <span class="value">97 unidades</span>
-          </div>
-          <div class="detail-item5">
-            <span class="label">Descripción:</span>
-            <span class="value">Humbug es el tercer álbum de estudio de la banda inglesa Arctic Monkeys lanzado el 19 de agosto de 2009.</span>
-          </div>
-          <div class="detail-item5">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list5">
-              <li>My Propeller</li>
-              <li>Crying Lightning</li>
-              <li>Dangerous Animals</li>
-              <li>Secret Door</li>
-              <li>Potion Approaching</li>
-              <li>Fire And The Thud</li>
-              <li>Cornerstone</li>
-              <li>Dance Little Liar</li>
-              <li>Pretty Visitors</li>
-              <li>The Jeweller's Hands</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Estructura principal */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  max-width: 1200px;
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-/* Imagen del álbum */
-.album-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* Botón de detalles */
-.details-btn5 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
-
-.details-btn5:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details5 {
-  display: none;
-  margin-top: 15px;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Detalles específicos */
-.details-grid5 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.detail-item5 {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item5 .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item5 .value {
-  color: #333;
-}
-
-.song-list5 {
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-top: 5px;
-  color: #444;
-}
-</style>
-
-<script>
-function toggleDetails5() {
-  const details = document.getElementById("album-details5");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
-
-
-  <!--Aqui deje de modificar el album Humbug-->  
-    </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!--Album Gorilaz-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification2">
-      <div class="image warning-bg">
-        <img src="assets/images/products/G.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Gorillaz</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Gorillaz</strong><br>
-          Año: <strong id="album-artist">2001</strong><br>
-          Stock: <strong id="album-year">100</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn3" onclick="toggleDetails3()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details3" id="album-details3">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item2">
-            <span class="label">Nombre:</span> <span class="value">Gorillaz</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Cantidad en Stock:</span> <span class="value">100 unidades</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Descripción:</span> 
-            <span class="value">Gorillaz es el álbum debut de la banda virtual británica homónima, lanzado el 26 de marzo de 2001.</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list2">
-              <li><strong>Re-Hash</strong></li>
-              <li><strong>5/4</strong></li>
-              <li><strong>Tomorrow Comes Today</strong></li>
-              <li><strong>New Genious (Brother)</strong></li>
-              <li><strong>Clint Eastwood</strong></li>
-              <li><strong>Man Research (Clapper)</strong></li>
-              <li><strong>Punk</strong></li>
-              <li><strong>Sound Check (Gravity)</strong></li>
-              <li><strong>Double Bass</strong></li>
-              <li><strong>Rock the House</strong></li>
-              <li><strong>19-2000</strong></li>
-              <li><strong>Latin Simone (¿Qué Pasa Contigo?)</strong></li>
-              <li><strong>Starshine</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification2 {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100px; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: cover; /* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn3 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn3:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details3 {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details2 h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item2 .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item2 .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list2 {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Imagen en detalles */
-.details2 img {
-  width: 100%; /* La imagen ocupa todo el ancho disponible */
-  height: auto; /* Mantiene las proporciones originales */
-  object-fit: contain; /* Evita distorsión */
-  border-radius: 8px; /* Bordes uniformes */
-}
-</style>
-
-<script>
-function toggleDetails3() {
-  const details2 = document.getElementById("album-details3");
-  details2.style.display = details2.style.display === "block" ? "none" : "block";
-}
-</script>
-
-    </div>
-    <!--Aqui termina el album Gorillaz-->
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!--Aqui modifique lo del album worst nightmare-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification3">
-      <div class="image warning-bg">
-        <img src="assets/images/products/FWNMM.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Favourite worst nightmare</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Arctic Monkeys</strong><br>
-          Año: <strong id="album-artist">2007</strong><br>
-          Stock: <strong id="album-year">123</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn2" onclick="toggleDetails2()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details2" id="album-details2">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item2">
-            <span class="label">Nombre:</span> <span class="value">Favourite worst nightmare</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Cantidad en Stock:</span> <span class="value">123 unidades</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Descripción:</span> 
-            <span class="value">Segundo álbum de estudio de Arctic Monkeys. El 29 de abril de 2007, Favourite Worst Nightmare llegó al puesto número #1 en UK Albums Chart.</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list2">
-              <li><strong>Brianstorm</strong></li>
-              <li><strong>D Is For Dangerous</strong></li>
-              <li><strong>Balaclava</strong></li>
-              <li><strong>Fluorescent Adolescent</strong></li>
-              <li><strong>Only Ones Who Know</strong></li>
-              <li><strong>Do Me A Favour</strong></li>
-              <li><strong>This House Is A Circus</strong></li>
-              <li><strong>If You Were There, Beware</strong></li>
-              <li><strong>The Bad Thing</strong></li>
-              <li><strong>Old Yellow Bricks</strong></li>
-              <li><strong>505</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification2 {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: auto; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: contain; /* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn2 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn2:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details2 {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details2 h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item2 .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item2 .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list2 {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Imagen en detalles */
-.details2 img {
-  width: auto; /* La imagen ocupa todo el ancho disponible */
-  max-height: 300px;/*Ajusta el tamaño maximo de la imagen */
-  height: auto; /* Mantiene las proporciones originales */
-  object-fit: contain; /* Evita distorsión */
-  border-radius: 8px; /* Bordes uniformes */
-  margin-bottom: 15px;
-}
-</style>
-
-<script>
-function toggleDetails2() {
-  const details3 = document.getElementById("album-details2");
-  details3.style.display = details3.style.display === "block" ? "none" : "block";
-}
-</script>
-
-     <!--Aqui deje de modificar lo del album Favorite worst-->
-
-    </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- Aqui modificare el album Blur -->
-
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification2">
-      <div class="image warning-bg">
-        <img src="assets/images/products/BC.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Blur</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Blur</strong><br>
-          Año: <strong id="album-artist">1997</strong><br>
-          Stock: <strong id="album-year">55</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn" onclick="toggleDetails()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details" id="album-details">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item">
-            <span class="label">Nombre:</span> <span class="value">Blur</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Cantidad en Stock:</span> <span class="value">55 unidades</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Descripción:</span> 
-            <span class="value">Blur es el quinto álbum de estudio de la banda británica de rock alternativo Blur, lanzado el 10 de febrero de 1997.</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list">
-              <li><strong>Beetlebum</strong></li>
-              <li><strong>Song 2</strong></li>
-              <li><strong>Country Sad Ballad Man</strong></li>
-              <li><strong>M.O.R.</strong></li>
-              <li><strong>On Your Own</strong></li>
-              <li><strong>Theme from Retro</strong></li>
-              <li><strong>You're So Great</strong></li>
-              <li><strong>Death of a Party</strong></li>
-              <li><strong>Chinese Bombs</strong></li>
-              <li><strong>I'm Just a Killer for Your Love</strong></li>
-              <li><strong>Look Inside America</strong></li>
-              <li><strong>Strange News from Another Star</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-  
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100px; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: cover;/* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Imagen en detalles */
-.details2 img {
-  width: 100%; /* La imagen ocupa todo el ancho disponible */
-  height: auto; /* Mantiene las proporciones originales */
-  object-fit: contain; /* Evita distorsión */
-  border-radius: 8px; /* Bordes uniformes */
-}
-</style>
-
-<script>
-function toggleDetails() {
-  const details2 = document.getElementById("album-details");
-  details2.style.display = details2.style.display === "block" ? "none" : "block";
-}
-</script>
-
-
-     <!--Aqui deje de modificar lo del album blur-->
-
-    </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Aqui epece a modificar el Álbum: Modern Life is Rubbish -->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification4">
-      <div class="image warning-bg">
-        <img src="assets/images/products/MLIRRR.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Modern Life is Rubbish</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Blur</strong><br>
-          Año: <strong id="album-artist">1993</strong><br>
-          Stock: <strong id="album-year">5</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn4" onclick="toggleDetails4()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details" id="album-details4">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item">
-            <span class="label">Nombre:</span> <span class="value">Modern Life is Rubbish</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Precio:</span> <span class="value">$200.00</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Cantidad en Stock:</span> <span class="value">5 unidades</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Descripción:</span>
-            <span class="value">Modern Life Is Rubbish es el segundo álbum de estudio de la banda británica de rock alternativo Blur, lanzado el 10 de mayo de 1993.</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list">
-              <li><strong>For Tomorrow</strong></li>
-              <li><strong>Advert</strong></li>
-              <li><strong>Colin Zeal</strong></li>
-              <li><strong>Pressure on Julian</strong></li>
-              <li><strong>Star Shaped</strong></li>
-              <li><strong>Blue Jeans</strong></li>
-              <li><strong>Chemical World</strong></li>
-              <li><strong>Sunday Sunday</strong></li>
-              <li><strong>Miss America</strong></li>
-              <li><strong>Villa Rosie</strong></li>
-              <li><strong>Coping</strong></li>
-              <li><strong>Oily Water</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100px; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: cover; /* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn4 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-</style>
-
-<script>
-function toggleDetails4() {
-  const details = document.getElementById("album-details4");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
-<!--Aqui deje de modificar el album modern life-->
-
-    </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!--Aqui comenzare a odificar el album black sabbath-->
-<!-- Álbum: Black Sabbath -->
-<!-- Álbum: Black Sabbath -->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification7">
-      <div class="image warning-bg">
-        <img src="assets/images/products/black sabbath.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Black Sabbath</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Black Sabbath</strong><br>
-          Año: <strong id="album-artist">1970</strong><br>
-          Stock: <strong id="album-year">40</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn7" onclick="toggleDetails7()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details7" id="album-details7">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item">
-            <span class="label">Nombre:</span> <span class="value">Black Sabbath</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Precio:</span> <span class="value">$200.00</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Cantidad en Stock:</span> <span class="value">40 unidades</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Descripción:</span>
-            <span class="value">Álbum debut de la banda Black Sabbath, lanzado en 1970. Considerado uno de los primeros álbumes de heavy metal.</span>
-          </div>
-          <div class="detail-item">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list">
-              <li><strong>Black Sabbath</strong></li>
-              <li><strong>The Wizard</strong></li>
-              <li><strong>Behind the Wall of Sleep</strong></li>
-              <li><strong>N.I.B.</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification6 {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%;
-  height: 100px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Botón de detalles */
-.details-btn7 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details7 {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-</style>
-
-<script>
-function toggleDetails7() {
-  const details = document.getElementById("album-details7");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
-
-
- <!--Aqui dejare de modificar el album black sabbath-->
-
-    </div>
-    <div class="action">
-      <button class="delete-btn">
-        <i class="lni lni-trash-can"></i>
-      </button>
-      <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="lni lni-more-alt"></i>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-        <li class="dropdown-item">
-          <a href="#0" class="text-gray">Modificar</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!--Aqui agregue el album Ok Computer-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification1">
-      <div class="image warning-bg">
-        <img src="assets/images/products/OKC.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: Ok Computer</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Radiohead</strong><br>
-          Año: <strong id="album-artist">2007</strong><br>
-          Stock: <strong id="album-year">123</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn1" onclick="toggleDetails1()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details1" id="album-details1">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item2">
-            <span class="label">Nombre:</span> <span class="value">Ok Computer</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Cantidad en Stock:</span> <span class="value">123 unidades</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Descripción:</span> 
-            <span class="value">OK Computer es el tercer álbum de estudio de la banda británica de rock alternativo Radiohead, lanzado el 21 de mayo de 1997 a través de las subsidiarias de EMI Parlophone y Capitol Records</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list2">
-              <li><strong>AirBag</strong></li>
-              <li><strong>Paranoid Android</strong></li>
-              <li><strong>Subterranean Homesick Alien</strong></li>
-              <li><strong>Exit Music (For a Film)</strong></li>
-              <li><strong>Let Down</strong></li>
-              <li><strong>Karma Police</strong></li>
-              <li><strong>Fitter Happier</strong></li>
-              <li><strong>Electioneering</strong></li>
-              <li><strong>Climbing Up the Walls</strong></li>
-              <li><strong>No Surprises</strong></li>
-              <li><strong>Lucky</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification1 {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: auto; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: contain; /* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn1 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn2:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details1 {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details2 h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item2 .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item2 .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list2 {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Imagen en detalles */
-.details2 img {
-  width: auto; /* La imagen ocupa todo el ancho disponible */
-  max-height: 300px;/*Ajusta el tamaño maximo de la imagen */
-  height: auto; /* Mantiene las proporciones originales */
-  object-fit: contain; /* Evita distorsión */
-  border-radius: 8px; /* Bordes uniformes */
-  margin-bottom: 15px;
-}
-</style>
-
-<script>
-function toggleDetails1() {
-  const details3 = document.getElementById("album-details1");
-  details3.style.display = details3.style.display === "block" ? "none" : "block";
-}
-</script>
-
-<!--Aqui termine de modificar el album Ok Coputer-->
-</div>
-<div class="action">
-  <button class="delete-btn">
-    <i class="lni lni-trash-can"></i>
-  </button>
-  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="lni lni-more-alt"></i>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-    <li class="dropdown-item">
-      <a href="#0" class="text-gray">Modificar</a>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-
-<!--Aqui comence con la modificacion del album 13-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification11">
-      <div class="image warning-bg">
-        <img src="assets/images/products/13B.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <a href="#0" class="content">
-        <h6>Album: 13</h6>
-        <p class="text-sm text-gray">
-          Artista: <strong id="album-title">Blur</strong><br>
-          Año: <strong id="album-artist">1999</strong><br>
-          Stock: <strong id="album-year">123</strong>
-        </p>
-      </a>
-
-      <!-- Botón para mostrar los detalles adicionales -->
-      <button class="details-btn11" onclick="toggleDetails11()">Detalles</button>
-
-      <!-- Contenedor de los detalles adicionales (oculto por defecto) -->
-      <div class="details11" id="album-details11">
-        <h4>Detalles del Producto</h4>
-        <div class="details-grid">
-          <div class="detail-item2">
-            <span class="label">Nombre:</span> <span class="value">13</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Precio:</span> <span class="value">$300.00</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Cantidad en Stock:</span> <span class="value">123 unidades</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Descripción:</span> 
-            <span class="value">13 es el sexto álbum de estudio de la banda británica de rock alternativo Blur, lanzado el 15 de marzo de 1999</span>
-          </div>
-          <div class="detail-item2">
-            <span class="label">Lista de Canciones:</span>
-            <ul class="song-list2">
-              <li><strong>Tender</strong></li>
-              <li><strong>Bugman</strong></li>
-              <li><strong>Coffee & TV</strong></li>
-              <li><strong>Swamp Song</strong></li>
-              <li><strong>1992</strong></li>
-              <li><strong>B.L.U.R.E.M.I.</strong></li>
-              <li><strong>Battle</strong></li>
-              <li><strong>Mellow Song</strong></li>
-              <li><strong>Trailerpark</strong></li>
-              <li><strong>Caramel</strong></li>
-              <li><strong>No Distance Left to Run</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%; /* Abarca todo el ancho disponible */
-  max-width: 1200px; /* Ancho máximo */
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  font-family: Arial, sans-serif;
-}
-
-.notification11 {
-  border: 10px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 900px;
-}
-
-/* Imagen */
-.album-image {
-  display: block;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: auto; /* Mantiene las proporciones */
-  margin-bottom: 10px;
-  border-radius: 8px;
-  object-fit: contain; /* Evita distorsión recortando si es necesario */
-}
-
-/* Botón de detalles */
-.details-btn11 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn2:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details11 {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo del contenido de detalles */
-.details2 h4 {
-  font-size: 1.2em;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item2 .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item2 .value {
-  color: #333;
-}
-
-/* Lista de canciones */
-.song-list2 {
-  margin-top: 5px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Imagen en detalles */
-.details2 img {
-  width: auto; /* La imagen ocupa todo el ancho disponible */
-  max-height: 300px;/*Ajusta el tamaño maximo de la imagen */
-  height: auto; /* Mantiene las proporciones originales */
-  object-fit: contain; /* Evita distorsión */
-  border-radius: 8px; /* Bordes uniformes */
-  margin-bottom: 15px;
-}
-</style>
-
-<script>
-function toggleDetails11() {
-  const details3 = document.getElementById("album-details11");
-  details3.style.display = details3.style.display === "block" ? "none" : "block";
-}
-</script>
-
-<!--Aqui termina la modificacion del album 13-->
-</div>
-<div class="action">
-  <button class="delete-btn">
-    <i class="lni lni-trash-can"></i>
-  </button>
-  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="lni lni-more-alt"></i>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-    <li class="dropdown-item">
-      <a href="#0" class="text-gray">Modificar</a>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-
-            <div class="notification-wrapper">
-              <div class="container-fluid">
-                <div class="title-wrapper pt-30">
-                  <div class="row align-items-center">
-                    <div class="col-md-6">
-                      <div class="title">
-                        <h2>Tocadiscos </h2>
-                      </div>
-                    </div>
-<!--Aqui coenzare a modificar tocadiscos vintage-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification">
-      <div class="image">
-        <img src="assets/images/products/T.jpg" alt="Imagen del Tocadiscos" class="album-image" />
-      </div>
-      <div class="content">
-        <h6>Tocadiscos Vintage</h6>
-        <p class="text-sm text-gray">
-          Tipo: <strong>Manual</strong><br>
-          Marca: <strong>Sony</strong><br>
-          Precio: <strong>$1150</strong>
-        </p>
-        <!-- Botón para mostrar detalles -->
-        <button class="details-btn6" onclick="toggleDetails6()">Detalles</button>
-      </div>
-    </div>
-
-    <!-- Contenedor de detalles -->
-    <div class="details" id="album-details6">
-      <h4>Detalles del Producto</h4>
-      <div class="details-grid">
-        <div class="detail-item">
-          <span class="label">Marca:</span> <span class="value">Sony</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Tipo:</span> <span class="value">Manual</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Precio:</span> <span class="value">$1150</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Descripción:</span>
-          <span class="value">
-            Este tocadiscos combina lo mejor de lo clásico y lo moderno. Con un diseño retro y tecnología actual, es perfecto para quienes quieren disfrutar del sonido cálido y auténtico de los discos de vinilo.
-          </span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Características:</span>
-          <ul class="song-list">
-            <li>Sonido de Alta Fidelidad</li>
-            <li>Velocidades de Reproducción Ajustables</li>
-            <li>Conectividad Versátil</li>
-            <li>Altavoces Integrados o Salida RCA</li>
-            <li>Brazo con Control Antideslizante</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 800px;
-  font-family: Arial, sans-serif;
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Imagen del producto */
-.album-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Botón de detalles */
-.details-btn6 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn6:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details {
-  display: none;
-  margin-top: 15px;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Organización de detalles */
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item .value {
-  color: #333;
-}
-
-/* Lista de características */
-.song-list {
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-top: 5px;
-  color: #444;
-}
-</style>
-
-<script>
-function toggleDetails6() {
-  const details = document.getElementById("album-details6");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
-
-
- <!--Aqui dejare de modificar tocadiscos vintage-->
-
-                        </div>
-                        <div class="action">
-                          <button class="delete-btn">
-                            <i class="lni lni-trash-can"></i>
-                          </button>
-                          <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="lni lni-more-alt"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                            <li class="dropdown-item">
-                              <a href="#0" class="text-gray">Modificar</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-<!--Aqui comienzan las modificaciones de tocadiscos moderno-->
-<div class="card-style">
-  <div class="single-notification">
-    <div class="notification">
-      <div class="image">
-        <img src="assets/images/products/TDS.jpg" alt="Imagen del álbum" class="album-image" />
-      </div>
-      <div class="content">
-        <h6>Tocadiscos Moderno</h6>
-        <p class="text-sm text-gray">
-          Tipo: <strong id="album-title">Automático</strong><br>
-          Marca: <strong id="album-artist">Audio-Technica</strong><br>
-          Precio: <strong id="album-year">$1300</strong>
-        </p>
-        <!-- Botón para mostrar detalles -->
-        <button class="details-btn9" onclick="toggleDetails9()">Detalles</button>
-      </div>
-    </div>
-
-    <!-- Contenedor de detalles -->
-    <div class="details9" id="album-details9">
-      <h4>Detalles del Producto</h4>
-      <div class="details-grid">
-        <div class="detail-item">
-          <span class="label">Marca:</span> <span class="value">Audio-Technica</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Tipo:</span> <span class="value">Automático</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Precio:</span> <span class="value">$1300</span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Descripción:</span>
-          <span class="value">
-            Este tocadiscos es el complemento perfecto para cualquier amante de la música. Equipado con un cartucho de aguja de diamante y un sistema de base antivibración, ofrece un sonido cálido y sin interferencias.
-          </span>
-        </div>
-        <div class="detail-item">
-          <span class="label">Características:</span>
-          <ul class="song-list">
-            <li><strong>Sonido de Alta Fidelidad</strong></li>
-            <li><strong>Velocidades de Reproducción Ajustables</strong></li>
-            <li><strong>Base Antivibración</strong></li>
-            <li><strong>Control de Tono y Pitch</strong></li>
-            <li><strong>Adaptador para Discos de 45 RPM</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-/* Diseño general */
-.card-style {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 800px;
-  font-family: Arial, sans-serif;
-}
-
-.single-notification {
-  width: 100%;
-  margin: 10px 0;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Imagen del producto */
-.album-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Botón de detalles */
-.details-btn9 {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.details-btn9:hover {
-  background-color: #0056b3;
-}
-
-/* Contenedor de detalles */
-.details9 {
-  display: none;
-  margin-top: 15px;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Organización de detalles */
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-item .label {
-  font-weight: bold;
-  color: #555;
-}
-
-.detail-item .value {
-  color: #333;
-}
-
-/* Lista de características */
-.song-list {
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-top: 5px;
-  color: #444;
-}
-</style>
-
-<script>
-function toggleDetails9() {
-  const details = document.getElementById("album-details9");
-  details.style.display = details.style.display === "block" ? "none" : "block";
-}
-</script>
-
- <!--Aqui terminan las modificaciones de tocadiscos moderno-->
-                        </div>
-                        <div class="action">
-                          <button class="delete-btn">
-                            <i class="lni lni-trash-can"></i>
-                          </button>
-                        <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="lni lni-more-alt"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                            <li class="dropdown-item">
-                              <a href="#0" class="text-gray">Modificar</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--Aqui comienzan las odificaciones de tocadiscos clasico-->
-                    <div class="card-style">
-                      <div class="single-notification">
-                        <div class="checkbox">
-                          <div class="form-check checkbox-style mb-20">
-                            <input class="form-check-input" type="checkbox" value="" id="checkbox-1" />
-                          </div>
-                        </div>
-                        <div class="notification">
-                          <div class="image warning-bg">
-                            <img src="assets/images/products/TTTT.jpg" alt="Imagen del álbum" class="album-image" />
-                          </div>
-                          <a href="#0" class="content">
-                            <h6>Tocadiscos Clásico</h6>
-                            <p class="text-sm text-gray">
-                              Tipo: <strong id="album-title">Semi-automático</strong><br>
-                              Marca: <strong id="album-artist">Technics</strong><br>
-                              Precio: <strong id="album-year">$ 1500</strong>
-                            </p>
-                          </a>
-
-       <button class="details-btn8" onclick="toggleDetails8()">Detalles</button>
-      
-       <div class="details8" id="album-details8">
-           <h4>Detalles del Producto</h4>
-           <div class="detail-item8">
-               <span class="label">Marca:</span> <span class="value">Technics</span>
-           </div>
-           <div class="detail-item8">
-               <span class="label">Tipo:</span> <span class="value">Semi-automático</span>
-           </div>
-           <div class="detail-item8">
-               <span class="label">Precio:</span> <span class="value">$1500</span>
-           </div>
-           <div class="detail-item8">
-               <span class="label">Descripción: </span> 
-               <span class="value"> Este tocadiscos es el complemento perfecto para cualquier amante de la música. Equipado con un cartucho de aguja de diamante y un sistema de base antivibración, ofrece un sonido cálido y sin interferencias.</span>
-           </div>
-           <div class="detail-item8">
-               <span class="label">Detalles:</span>
-               <ul class="song-list8">
-                   <li><strong>Material Premium</strong></li>
-                   <li><strong>Aguja Reemplazable</strong></li>
-                   <li><strong>Estilo Vintage con Toques Modernos</strong> </li>
-                   <li><strong>Variedad de Colores y Acabados</strong></li>
-                   <li><strong>Cápsula de Repuesto</strong></li>
-               </ul>
-           </div>
-       </div>
-   </div>
-   
-   <style>
-     .notification {
-         position: relative;
-         border: 1px solid #ddd;
-         border-radius: 8px;
-         padding: 15px;
-         margin: 10px;
-         max-width: 400px;
-         font-family: Arial, sans-serif;
-     }
- 
-     .details8 {
-         display: none;
-         font-size: 0.9em;
-         color: #333;
-         margin-top: 15px;
-         padding: 15px;
-         border-top: 1px solid #ddd;
-         border-radius: 8px;
-         max-width: 800px; 
-         background-color: #f9f9f9;
-         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-     }
- 
-     .details h4 {
-         margin-top: 0;
-         font-size: 1.1em;
-         color: #444;
-         border-bottom: 1px solid #ddd;
-         padding-bottom: 5px;
-     }
- 
-     .detail-item8 {
-         display: flex;
-         margin-top: 8px;
-         font-size: 0.95em;
-     }
- 
-     .detail-item8 .label {
-         font-weight: bold;
-         width: 120px; 
-         color: #555;
-     }
- 
-     .detail-item8 .value {
-         color: #333;
-     }
- 
-     .song-list8 {
-         padding-left: 20px;
-         list-style-type: disc;
-         color: #444;
-         margin: 5px 0;
-     }
- 
-     .details-btn8 {
-         background-color: #007bff;
-         color: white;
-         border: none;
-         padding: 8px 12px;
-         cursor: pointer;
-         border-radius: 4px;
-         font-size: 0.9em;
-         margin-top: 10px;
-     }
-     .card-style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-     .single-notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
- </style>
- 
- <script>
-     function toggleDetails8() {
-         const details8 = document.getElementById("album-details8");
-         if (details8.style.display === "none" || details8.style.display === "") {
-             details8.style.display = "block";
-         } else {
-             details8.style.display = "none";
-         }
-     }
- </script>
- <!--Aqui terminan las modificciones de tocadiscos clasico-->
-
-                        </div>
-                        <div class="action">
-                          <button class="delete-btn">
-                            <i class="lni lni-trash-can"></i>
-                          </button>
-                          <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="lni lni-more-alt"></i>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                            <li class="dropdown-item">
-                              <a href="#0" class="text-gray">Modificar</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
+            <div id="detallesModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn" onclick="cerrarModal()">×</span>
+                <h3 id="modal-titulo"></h3>
+                <p id="modal-descripcion"></p>
+              </div>
+            </div>
+            
+            <style>
+              /* Contenedor principal */
+              .admin-productos {
+                padding: 30px;
+                background-color: #f4f7fb;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              }
+            
+              .seccion-productos {
+                margin-bottom: 40px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+              }
+            
+              .seccion-productos h2 {
+                font-size: 24px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 10px;
+              }
+            
+              .btn {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+              }
+            
+              .btn:hover {
+                background-color: #0056b3;
+              }
+            
+              .btn.agregar {
+                background-color: #283fa7;
+                font-size: 16px; 
+              }
+            
+              .btn.agregar:hover {
+                background-color: #283fa7;
+              }
+            
+              .lista-productos {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 30px;
+                padding-top: 20px;
+              }
+            
+              .producto {
+                background-color: #fff;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              }
+            
+              .producto:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+              }
+            
+              .producto-img {
+                max-width: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+                height: 200px;
+                margin-bottom: 15px;
+              }
+            
+              .producto h3 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #333;
+                margin-bottom: 10px;
+              }
+            
+              .producto p {
+                font-size: 14px;
+                color: #777;
+              }
+            
+              .producto button {
+                margin-top: 15px;
+              }
+            
+              /* Modal */
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                overflow: auto;
+                transition: opacity 0.3s ease;
+              }
+            
+              .modal-content {
+                background-color: #fff;
+                margin: 10% auto;
+                padding: 30px;
+                border-radius: 10px;
+                width: 80%;
+                max-width: 600px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+              }
+            
+              .modal-content h3 {
+                font-size: 24px;
+                color: #333;
+                margin-bottom: 15px;
+              }
+            
+              .modal-content p {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.6;
+              }
+            
+              .close-btn {
+                color: #aaa;
+                font-size: 30px;
+                font-weight: bold;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                cursor: pointer;
+              }
+            
+              .close-btn:hover,
+              .close-btn:focus {
+                color: #000;
+              }
+            </style>
+                        
+            <script>
+              const productosVinilos = {
+  "Favourite Worst Nightmare": {
+    año: 2007,
+    canciones: ["Brianstorm", "Teddy Picker", "Balaclava", "D Is For Dangerous", "Flourescent Adolecent", "Do me a favour", "This house is a circus", "505"],
+  },
+  "Humbug": {
+    año: 2009,
+    canciones: ["My Propeller", "Crying Lightning", "Cornerstone", "Secret Door", "Potion Approaching", " Dangerous Animals", "The jewerly hands"],
+  },
+  "13 (Blur)": {
+    año: 1999,
+    canciones: ["Tender", "Bugman", "Coffee & TV", "Swamp Song", "Mellow song", "Caramel", "Trimm Trabb", "No Distance Left to Run" ],
+  },
+  "Blur (Álbum Homónimo)": {
+    año: 1997,
+    canciones: ["Beetlebum", "Song 2", "Death of a party", "M.O.R", "On your own", "Im just a killer for your love", "Look inside to America"],
+  },
+  "Black Sabbath (Álbum Homónimo)": {
+    año: 1970,
+    canciones: ["Black Sabbath", "The Wizard", "Fairies Wear Boots", "N.I.B.", "Behind The Wall Of Sleep"],
+  },
+  "Ten (Pearl Jam)": {
+    año: 1991,
+    canciones: ["Once", "Even Flow", "Alive", "Black", "Jeremy"],
+  },
+  "Gorillaz (Álbum Debut)": {
+    año: 2001,
+    canciones: ["Re-Hash", "5/4", "Tomorrow Comes Today", "Clint Eastwood", "Man Research (Clapper)"],
+  },
+  "Modern Life Is Rubbish (Blur)": {
+    año: 1993,
+    canciones: ["For Tomorrow", "Advert", "Colin Zeal", "Chemical World", "Sunday Sunday", "Oily Water", "Star Shaped", "Coping", "Popscene"],
+  },
+  "OK Computer (Radiohead)": {
+    año: 1997,
+    canciones: ["Airbag", "Paranoid Android", "Subterranean Homesick Alien", "Exit Music (For A Film)", "No Surprises"],
+  },
+  "Revolver (The Beatles)": {
+    año: 1966,
+    canciones: ["Taxman", "Eleanor Rigby", "I'm Only Sleeping", "Love You To", "Here, There And Everywhere"],
+  },
+  "Romance (Fontaines D.C.)": {
+    año: 2024,
+    canciones: ["Starbuster", "Heres the thing", "Bug", "Desire", "In the modern world", "Death Kink", "Favourite"],
+  },
+  "The New Abnormal (The Strokes)": {
+    año: 2020,
+    canciones: ["At The Door", "Bad Decisions", "Brooklyn Bridge To Chorus", "Eternal Summer", "Why Are Sundays So Depressing"],
+  }
+};
+
+              const tocadiscos = {
+                "Tocadiscos Vintage - Sony": {
+                  tipo: "Manual",
+                  características: "Diseño clásico, requiere manejo manual.",
+                },
+                "Tocadiscos Moderno - Audio-Technica": {
+                  tipo: "Automático",
+                  características: "Reproducción totalmente automatizada.",
+                },
+                "Tocadiscos Clásico - Technics": {
+                  tipo: "Semi-Automatico",
+                  características: "Reproducción medianamente automatizada.",
+                },
+              };
+            
+              function verDetalles(tipo, nombre) {
+                let detalles = '';
+            
+                if (tipo === 'vinilo') {
+                  const vinilo = productosVinilos[nombre];
+                  detalles = `
+                    <h3>${nombre}</h3>
+                    <p>Año: ${vinilo.año}</p>
+                    <p>Canciones:</p>
+                    <ul>${vinilo.canciones.map(cancion => `<li>${cancion}</li>`).join('')}</ul>
+                  `;
+                } else if (tipo === 'tocadisco') {
+                  const tocadisco = tocadiscos[nombre];
+                  detalles = `
+                    <h3>${nombre}</h3>
+                    <p>Tipo: ${tocadisco.tipo}</p>
+                    <p>Características: ${tocadisco.características}</p>
+                  `;
+                }
+            
+                document.getElementById('modal-titulo').innerHTML = nombre;
+                document.getElementById('modal-descripcion').innerHTML = detalles;
+                document.getElementById('detallesModal').style.display = 'block';
+              }
+            
+              function cerrarModal() {
+                document.getElementById('detallesModal').style.display = 'none';
+              }
+            </script>
+            
+            
         <footer class="footer">
           <div class="container-fluid">
             <div class="row">
