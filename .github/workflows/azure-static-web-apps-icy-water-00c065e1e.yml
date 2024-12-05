@@ -26,4 +26,4 @@ jobs:
           azure_static_web_apps_api_token: aac4c3034ad8d33ea2167d211bc5a975ea574c3dc6bc4699c741b03e693b56ee05-b50d4fae-9905-49b8-a016-6c1536cc822f01e052500c065e1e
           app_location: "/"  # Codigo index
           api_location: ""   # Api
-          output_location: "." # Carpeta
+          output_location: "/" # Carpeta
